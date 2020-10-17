@@ -1,0 +1,24 @@
+$mainColor: #174193;
+$secondaryColor: #d21e18;
+$tertiaryColor: #fdc101;
+$tertiaryColorFont: #604500;
+$grayColor: #d1d1d1;
+$grayColor-2: #EAEAEA;
+$fontColor: #474747;
+$titleColor: $mainColor;
+
+// media query
+    $breakpoint-tablet: 48em;
+    $breakpoint-desktop: 64em;
+    $breakpoint-desktop-lg: 75em;
+
+:root {
+    --mainColor: #174193;
+    --secondaryColor: #d21e18;
+    --tertiaryColor: #fdc101;
+    --tertiaryColorFont: #604500;
+    --grayColor: #d1d1d1;
+    --grayColor-2: #EAEAEA;
+    --fontColor: #474747;
+    --titleColor: var(--mainColor);
+}
