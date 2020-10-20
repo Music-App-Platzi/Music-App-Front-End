@@ -1,11 +1,12 @@
-$mainColor: #174193;
-$secondaryColor: #d21e18;
-$tertiaryColor: #fdc101;
-$tertiaryColorFont: #604500;
-$grayColor: #d1d1d1;
-$grayColor-2: #EAEAEA;
-$fontColor: #474747;
-$titleColor: $mainColor;
+$mainColor: #F51E38;
+$secondaryColor: #3E2AD1;
+$tertiaryColor: #0F1E36;
+$backgroundColor: #F4F9FF;
+$grayColor: #EEEEEE;
+$grayColor-2: #C4C4C4;
+$fontColor: $tertiaryColor;
+$success: #0DBB66;
+$danger : #F8282F;
 
 // media query
     $breakpoint-tablet: 48em;
@@ -13,12 +14,13 @@ $titleColor: $mainColor;
     $breakpoint-desktop-lg: 75em;
 
 :root {
-    --mainColor: #174193;
-    --secondaryColor: #d21e18;
-    --tertiaryColor: #fdc101;
-    --tertiaryColorFont: #604500;
-    --grayColor: #d1d1d1;
-    --grayColor-2: #EAEAEA;
-    --fontColor: #474747;
-    --titleColor: var(--mainColor);
+  --mainColor: #F51E38;
+  --secondaryColor: #3E2AD1;
+  --tertiaryColor: #0F1E36;
+  --backgroundColor: #F4F9FF;
+  --grayColor: #EEEEEE;
+  --grayColor-2: #C4C4C4;
+  --fontColor: var(--tertiaryColor);
+  --success: #0DBB66;
+  --danger : #F8282F;
 }
