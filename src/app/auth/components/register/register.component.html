@@ -1,2 +1,25 @@
-<p>register works!</p>
-<a routerLink="/home">regresar</a>
+
+<div class="container-body">
+
+    <a routerLink="/home" class="return">regresar</a>
+
+    <section class="from-register">
+        <h4>Formulario Registro</h4>
+        <form [formGroup]="form">
+            <input class="controls" type="text" formControlName="name" placeholder="Ingresa tu Nombre">
+            <input class="controls" type="text" formControlName="userName" placeholder="Ingresa tu Nombre de Usuario">
+            <input class="controls" type="email" formControlName="email" placeholder="Ingresa tu correo">
+            <input class="controls" type="password" formControlName="password" placeholder="Ingresa tu contraseña">
+            <input class="controls" type="file" formControlName="photo">
+        </form>
+        <p>Estoy deacuerdo con <a>Terminos y condiciones</a></p>
+        <input class="botons" type="submit" value="Registrar" (click)="register($event)">
+        <div class="login-button-container">
+            <a  class="googlebuton" href="#">
+              <img src="../assets/icon/google-logo.png" alt="Google logo"><span>Registrate con Google</span>
+            </a>
+        </div>
+        <p><a routerLink="/login">¿Ya tengo cuenta?</a></p>
+    </section>
+</div>
+
