@@ -1,0 +1,139 @@
+@import "assets/scss/variable";
+
+
+
+.container-body{
+    width: 100%;
+    height: 900px;
+    position: absolute;
+    margin-left: -10px;
+    margin-top: -20px;
+    background: $mainSecondColor;
+}
+
+.return{
+    width: 30%;
+    display: block;
+    background: linear-gradient(50deg, $mainFristColor, $mainColor);
+    padding: 28px 30px;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    color: $whiteColor;
+    font-size: 18px;
+    font-family: 'calibri';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    transition: all 300ms;
+    text-decoration: none;
+}
+
+.return:hover{
+    transform: translateY(10px);
+    box-shadow: 0px 30px 5px -15px rgba(0, 0, 0, 0.3);
+}
+.from-register{
+    width: 400px;
+    background: $mainSecondColor;
+    padding: 30px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: $whiteColor;
+    box-shadow: 7px 13px 37px #000;
+         
+         h4{
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        p{
+            height: 40px;
+            text-align: center;
+            font-size: 18px;
+            line-height: 40px;
+        }
+
+        a{
+            color: $whiteColor;
+            text-decoration: none;
+        }
+}
+
+
+.controls{
+    width: 100%;
+    background: $mainSecondColor;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid $mainColor;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: $whiteColor;
+    
+}
+
+
+.from-register a:hover {
+    color:$whiteColor;
+    text-decoration: underline;
+}
+
+.from-register .botons{
+    width: 100%;
+    background: $mainColor;
+    border: none;
+    padding: 12px;
+    color:$whiteColor;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.from-register .botons:hover{
+    background: rgba(0, 117, 217, 0.7);
+}
+
+.login-button-container{
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .googlebuton{
+    width: 50%;
+    text-align: center;
+    padding: 1px 0 1px 5px;
+    font-size: 16px;
+    font-family: 'calibri';
+    margin: 15px;
+    background: $mainColor;
+    color:$whiteColor;
+    display: flex;
+    align-items: center;
+    border-radius: 1px;
+    text-decoration: none;
+  
+  }
+  
+  .googlebuton:hover{
+    background: rgba(0, 117, 217, 0.7);
+    text-decoration: none;
+  }
+  
+  .googlebuton img{
+    width: 38px;
+    height: 38px;
+    margin-right: 7px;
+  }
+  
+  .googlebuton  span{
+    vertical-align: middle;
+    padding-bottom: 2px;
+    margin-left: 5px;
+  }
+  
