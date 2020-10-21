@@ -2,10 +2,15 @@
     <a routerLink="/home" class="return">regresar</a>
     <section class="from-register">
         <h4>Iniciar Sesion</h4>
-        <input class="controls" type="email" nombre="correo" id="correo" placeholder="Ingresa tu Usuario o Correo">
-        <input class="controls" type="password" nombre="correo" id="correo" placeholder="Ingresa tu contraseña">
-        <input type="checkbox" class="check-box"><span class="question-box">Recordar Contraseña</span>
-        <input class="botons" type="submit" value="Entrar">
+        <form [formGroup]="form">
+            <input class="controls" type="email" formControlName="email" placeholder="Ingresa tu Usuario o Correo">
+            <div *ngIf="form.get('email').errors && form.get('email').dirty">
+                <p *ngIf="form.get('email').hasError('requiered')">Este campo es requerido</p>
+            </div>
+            <input class="controls" type="password" formControlName="password" placeholder="Ingresa tu contraseña">
+            <input type="checkbox" class="check-box"><span class="question-box">Recordar Contraseña</span>
+        </form>
+        <input class="botons" type="submit" value="Entrar" (click)="login($event)">
         <p><a href="#">¿Olvide mi Contrasña?</a></p>
     </section>
 </div>

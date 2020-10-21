@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 
 import { SharedModule } from './shared/shared.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    FontAwesomeModule
+    // FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

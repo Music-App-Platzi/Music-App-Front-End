@@ -5,18 +5,21 @@
 
     <section class="from-register">
         <h4>Formulario Registro</h4>
-        <input class="controls" type="text" nombre="nombres" id="nombres" placeholder="Ingresa tu Nombre">
-        <input class="controls" type="text" nombre="apellidos" id="apellidos" placeholder="Ingresa tu Nombre de Usuario">
-        <input class="controls" type="email" nombre="correo" id="correo" placeholder="Ingresa tu correo">
-        <input class="controls" type="password" nombre="correo" id="correo" placeholder="Ingresa tu contraseña">
-        <p>Estoy deacuerdo con <a href="#">Terminos y condiciones</a></p>
-        <input class="botons" type="submit" value="Registrar">
+        <form [formGroup]="form">
+            <input class="controls" type="text" formControlName="name" placeholder="Ingresa tu Nombre">
+            <input class="controls" type="text" formControlName="userName" placeholder="Ingresa tu Nombre de Usuario">
+            <input class="controls" type="email" formControlName="email" placeholder="Ingresa tu correo">
+            <input class="controls" type="password" formControlName="password" placeholder="Ingresa tu contraseña">
+            <input class="controls" type="file" formControlName="photo">
+        </form>
+        <p>Estoy deacuerdo con <a>Terminos y condiciones</a></p>
+        <input class="botons" type="submit" value="Registrar" (click)="register($event)">
         <div class="login-button-container">
             <a  class="googlebuton" href="#">
               <img src="../assets/icon/google-logo.png" alt="Google logo"><span>Registrate con Google</span>
             </a>
         </div>
-        <p><a href="#">¿Ya tengo cuenta?</a></p>
+        <p><a routerLink="/login">¿Ya tengo cuenta?</a></p>
     </section>
 </div>
 

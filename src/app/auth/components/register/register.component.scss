@@ -1,25 +1,25 @@
-@import "assets/scss/variable";
+// @import "assets/scss/variable";
 
 
 
 .container-body{
     width: 100%;
-    height: 900px;
+    height: 100%;
     position: absolute;
     margin-left: -10px;
     margin-top: -20px;
-    background: $mainSecondColor;
+    background: var(--mainColor);
 }
 
 .return{
     width: 30%;
     display: block;
-    background: linear-gradient(50deg, $mainFristColor, $mainColor);
+    background: linear-gradient(50deg, var(--mainFristColor), var(--mainColor));
     padding: 28px 30px;
     text-align: center;
     margin: auto;
     margin-top: 30px;
-    color: $whiteColor;
+    color: var(--whiteColor);
     font-size: 18px;
     font-family: 'calibri';
     text-transform: uppercase;
@@ -35,13 +35,13 @@
 }
 .from-register{
     width: 400px;
-    background: $mainSecondColor;
+    background: var(--mainColor);
     padding: 30px;
     margin: auto;
     margin-top: 30px;
     border-radius: 4px;
     font-family: 'calibri';
-    color: $whiteColor;
+    color: var(--whiteColor);
     box-shadow: 7px 13px 37px #000;
          
          h4{
@@ -57,7 +57,7 @@
         }
 
         a{
-            color: $whiteColor;
+            color: var(--whiteColor);
             text-decoration: none;
         }
 }
@@ -65,29 +65,29 @@
 
 .controls{
     width: 100%;
-    background: $mainSecondColor;
+    background: var(--mainColor);
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
-    border: 1px solid $mainColor;
+    border: 1px solid var(--mainColor);
     font-family: 'calibri';
     font-size: 18px;
-    color: $whiteColor;
+    color: var(--whiteColor);
     
 }
 
 
 .from-register a:hover {
-    color:$whiteColor;
+    color:var(--whiteColor);
     text-decoration: underline;
 }
 
 .from-register .botons{
     width: 100%;
-    background: $mainColor;
+    background: var(--mainColor);
     border: none;
     padding: 12px;
-    color:$whiteColor;
+    color:var(--whiteColor);
     margin: 10px 0;
     font-size: 16px;
     cursor: pointer;
@@ -111,8 +111,8 @@
     font-size: 16px;
     font-family: 'calibri';
     margin: 15px;
-    background: $mainColor;
-    color:$whiteColor;
+    background: var(--mainColor);
+    color:var(--whiteColor);
     display: flex;
     align-items: center;
     border-radius: 1px;
@@ -136,4 +136,3 @@
     padding-bottom: 2px;
     margin-left: 5px;
   }
-  
