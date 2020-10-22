@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+}
+
+.admin-nav {
+  width: 12em;
+  border-right: var(--grayColor) solid 2px;
+
+  &--btn {
+    width: 100%;
+    text-align: left;
+    padding: 0.8em;
+    padding-left: 5em;
+    position: relative;
+    font-weight: 600;
+    color: var(--tertiaryColorA);
+
+    &:hover {
+      background-color: var(--backgroundColor);
+    }
+
+    &__active {
+      color: var(--secondaryColor);
+    }
+  }
+}

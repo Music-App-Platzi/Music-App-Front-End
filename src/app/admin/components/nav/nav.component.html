@@ -1,0 +1,16 @@
+<nav class="admin-nav">
+  <a class="btn admin-nav--btn" routerLink="./users">
+    Users
+  </a>
+  <a class="btn admin-nav--btn" routerLink="./artist">
+    Artist
+  </a>
+  <a class="btn admin-nav--btn" routerLink="./albums">
+    Albums
+  </a>
+  <a class="btn admin-nav--btn" routerLink="./songs">
+    Songs
+  </a>
+  <button mat-raised-button (click)="logout()">Salir</button>
+</nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,23 @@
+
+.table {
+  &--responsive {
+    overflow-x: auto;
+  }
+
+  width: 100%;
+
+  th,
+  td {
+    padding: .5em;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  thead th {
+    color: $fontColor;
+  }
+
+  tbody td {
+    color: $fontColorA;
+  }
+}

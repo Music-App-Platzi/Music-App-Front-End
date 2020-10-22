@@ -1,0 +1,16 @@
+.btn {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  background-color: transparent;
+  color: $fontColorA;
+  border: none;
+  border-radius: 0;
+  padding: 0.5em;
+  transition: background-color 0.3s;
+
+  &:focus {
+    outline: none;
+  }
+}

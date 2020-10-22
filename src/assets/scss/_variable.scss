@@ -1,11 +1,13 @@
-$mainColor: #174193;
-$secondaryColor: #d21e18;
-$tertiaryColor: #fdc101;
-$tertiaryColorFont: #604500;
-$grayColor: #d1d1d1;
-$grayColor-2: #EAEAEA;
-$fontColor: #474747;
-$titleColor: $mainColor;
+$mainColor: hsl(353, 91%, 54%);
+$secondaryColor: hsl(247, 67%, 49%);
+$tertiaryColor: hsl(217, 57%, 14%);
+$backgroundColor: #F4F9FF;
+$grayColor: #EEEEEE;
+$grayColor-2: #C4C4C4;
+$fontColor: $tertiaryColor;
+$fontColorA: hsla(217, 57%, 14%, .5);
+$success: #0DBB66;
+$danger : #F8282F;
 
 // media query
     $breakpoint-tablet: 48em;
@@ -13,12 +15,14 @@ $titleColor: $mainColor;
     $breakpoint-desktop-lg: 75em;
 
 :root {
-    --mainColor: #174193;
-    --secondaryColor: #d21e18;
-    --tertiaryColor: #fdc101;
-    --tertiaryColorFont: #604500;
-    --grayColor: #d1d1d1;
-    --grayColor-2: #EAEAEA;
-    --fontColor: #474747;
-    --titleColor: var(--mainColor);
+  --mainColor: hsl(353, 91%, 54%);
+  --secondaryColor: hsl(247, 67%, 49%);
+  --tertiaryColor: hsl(217, 57%, 14%);
+  --backgroundColor: #F4F9FF;
+  --grayColor: #EEEEEE;
+  --grayColor-2: #C4C4C4;
+  --fontColor: var(--tertiaryColor);
+  --fontColorA: hsla(217, 57%, 14%, .5);
+  --success: #0DBB66;
+  --danger : #F8282F;
 }
