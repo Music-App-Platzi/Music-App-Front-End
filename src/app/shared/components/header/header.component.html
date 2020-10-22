@@ -1,29 +1,36 @@
 <header>
   <!-- LOGO -->
   <div class="container-logo">
-    <picture>
-      <img src="assets/images/Logo.jpg" class="app-logo" alt="LogoMusicApp" />
-    </picture>
+    <img src="assets/images/Logo.jpg" class="logo" alt="LogoMusicApp" />
   </div>
 
   <div class="container-nav">
+    
     <!-- SEARCH SONGS -->
     <div class="search-songs">
-      <input type="image" src="assets/images/Serch.svg" class="image_search"/>
-      <input type="text" class="search" placeholder="Search your entertainment"/>
+      <input
+        type="image"
+        src="assets/images/Serch.svg"
+        class="search-songs--image"
+      />
+      <input
+        type="text"
+        class="search-songs--input"
+        placeholder="Search your entertainment"
+      />
     </div>
-              
+
     <!-- MENU -->
     <nav>
       <ul class="nav-right-section">
-         <li>
+        <li>
           <a href="">
-              <img src="assets/images/User.jpg" alt="Not found">
+            <img src="assets/images/User.jpg" alt="Not found" />
           </a>
         </li>
-         <li><a routerLink="login">Login</a></li>
-         <li><a routerLink="register"> Register</a></li>
-      </ul>  
+        <li><a routerLink="login">Login</a></li>
+        <li><a routerLink="register"> Register</a></li>
+      </ul>
     </nav>
   </div>
 </header>
