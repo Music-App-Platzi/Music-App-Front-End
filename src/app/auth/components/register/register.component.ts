@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { AuthService } from './../../../core/auth.service';
@@ -21,7 +21,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) {
     this.buildForm();
    }
@@ -51,8 +52,8 @@ export class RegisterComponent implements OnInit {
       photo: ['', ],
     });
   }
-  goToLogin(){
-
+  goToLogin(): void{
+    this.router.navigate(['/login']);
   }
 
 }
