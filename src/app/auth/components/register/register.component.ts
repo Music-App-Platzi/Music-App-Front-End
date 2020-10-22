@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { AuthService } from './../../../core/auth.service';
+
+import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 
 @Component({
   selector: 'app-register',
@@ -9,10 +13,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
+  @ViewChild('succesfulLRegisterSwal') private succesfulLRegisterSwal: SwalComponent;
+  @ViewChild('errorRegisterSwal') private errorRegisterSwal: SwalComponent;
+  @ViewChild('notDataRegisterSwal') private notDataRegisterSwal: SwalComponent;
+
   form: FormGroup;
 
   constructor(
-    private formBuilder: FormBuilder
+    private authService: AuthService,
+    private formBuilder: FormBuilder,
+    private router: Router
   ) {
     this.buildForm();
    }
@@ -23,17 +33,27 @@ export class RegisterComponent implements OnInit {
     event.preventDefault();
     if (this.form.valid){
       const formRegister = this.form.value;
-      console.log(formRegister);
+      this.authService.createUser(formRegister)
+      .subscribe( () => {
+        this.succesfulLRegisterSwal.fire();
+      }, () => {
+        this.errorRegisterSwal.fire();
+      });
+    }else{
+      this.notDataRegisterSwal.fire();
     }
   }
   private buildForm(): void{
     this.form = this.formBuilder.group({
       name: ['', [Validators.required]],
       userName: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
+      mail: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
       photo: ['', ],
     });
+  }
+  goToLogin(): void{
+    this.router.navigate(['/login']);
   }
 
 }

@@ -1,16 +1,17 @@
 
 <div class="container-body">
-
     <a routerLink="/home" class="return">regresar</a>
-
     <section class="from-register">
         <h4>Formulario Registro</h4>
         <form [formGroup]="form">
             <input class="controls" type="text" formControlName="name" placeholder="Ingresa tu Nombre">
             <input class="controls" type="text" formControlName="userName" placeholder="Ingresa tu Nombre de Usuario">
-            <input class="controls" type="email" formControlName="email" placeholder="Ingresa tu correo">
+            <input class="controls" type="email" formControlName="mail" placeholder="Ingresa tu correo">
             <input class="controls" type="password" formControlName="password" placeholder="Ingresa tu contraseña">
-            <input class="controls" type="file" formControlName="photo">
+            <div>
+                <label for="photo">Enviar Foto</label>
+                <input class="register-file" type="file" formControlName="photo">
+            </div>
         </form>
         <p>Estoy deacuerdo con <a>Terminos y condiciones</a></p>
         <input class="botons" type="submit" value="Registrar" (click)="register($event)">
@@ -22,4 +23,31 @@
         <p><a routerLink="/login">¿Ya tengo cuenta?</a></p>
     </section>
 </div>
+
+<ngx-spinner color="white" type = "ball-scale-ripple-multiple">
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+<swal
+  #succesfulLRegisterSwal
+  title="succesful Register"
+  text="Successful registration now login to live the best experience"
+  icon="success"
+  [showCancelButton]="true"
+  [focusCancel]="true"
+  (confirm)="goToLogin()">
+</swal>
+<swal
+  #errorRegisterSwal
+  title="Error Register"
+  text=" Oops !! An error occurred at the time of registration, please check the fields entered or try later"
+  icon="error"
+  [focusCancel]="true">
+</swal>
+<swal
+  #notDataRegisterSwal
+  title="Error Data Register"
+  text="Whoops! check the corresponding fields, remember that it must be completed to register"
+  icon="error"
+  [focusCancel]="true">
+</swal>
 
