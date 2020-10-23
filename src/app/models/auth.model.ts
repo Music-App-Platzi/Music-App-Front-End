@@ -1,0 +1,30 @@
+export interface LoginResponse{
+    user: {
+        id: number
+        rol_id: boolean,
+        username: string;
+        name: string;
+        mail: string;
+        password: string;
+        thumbnail: string;
+    };
+    token: string;
+}
+export interface Register {
+    username: string;
+    name: string;
+    mail: string;
+    password: string;
+}
+export interface RegisterResponse {
+    user: {
+        id: number
+        rol_id: boolean,
+        username: boolean;
+        name: string;
+        mail: string;
+        password: string;
+        thumbnail: boolean;
+    };
+    token: string;
+}
