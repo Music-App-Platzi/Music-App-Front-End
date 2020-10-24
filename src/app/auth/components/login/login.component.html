@@ -3,16 +3,7 @@
     <section class="from-register">
         <h4>Iniciar Sesion</h4>
         <form [formGroup]="form">
-<<<<<<< HEAD
-            <input class="from-register--controls"type="email" formControlName="email" placeholder="Ingresa tu Usuario o Correo">
-            <div *ngIf="form.get('email').errors && form.get('email').dirty">
-                <p *ngIf="form.get('email').hasError('requiered')">Este campo es requerido</p>
-=======
-            <input class="controls" type="email" formControlName="mail" placeholder="Ingresa tu Usuario o Correo">
-            <div *ngIf="form.get('mail').errors && form.get('mail').dirty">
-                <p *ngIf="form.get('mail').hasError('requiered')">Este campo es requerido</p>
->>>>>>> 30bde94e972f6f93f93f4edf52e125e250446d87
-            </div>
+            <input class="from-register--controls"type="email" formControlName="mail" placeholder="Ingresa tu Usuario o Correo">
             <input class="from-register--controls" type="password" formControlName="password" placeholder="Ingresa tu contraseña">
             <input type="checkbox" class="check-box"><span class="question-box">Recordar Contraseña</span>
         </form>
