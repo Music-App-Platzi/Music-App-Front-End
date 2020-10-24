@@ -9,6 +9,7 @@ export interface LoginResponse{
         thumbnail: string;
     };
     token: string;
+    is_user: boolean;
 }
 export interface Register {
     username: string;

@@ -28,10 +28,10 @@
             <img src="assets/images/User.jpg" alt="Not found" />
           </a>
         </li>
-        <li><a routerLink="login">Login</a></li>
-        <li><a routerLink="profile">Profile</a></li>
-        <li><a routerLink="register"> Register</a></li>
-        <li><a (click)="signOff()"> Cerrar Sesión</a></li>
+        <li><a routerLink="login" *ngIf="!userInfo?.is_user">Login</a></li>
+        <li><a routerLink="profile" *ngIf="userInfo?.is_user">Profile</a></li>
+        <li><a routerLink="register"*ngIf="!userInfo?.is_user"> Register</a></li>
+        <li><a (click)="signOff()" *ngIf="userInfo?.is_user"> Cerrar Sesión</a></li>
       </ul>
     </nav>
   </div>
