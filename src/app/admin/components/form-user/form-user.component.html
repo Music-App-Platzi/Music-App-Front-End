@@ -1,0 +1,11 @@
+<h1 class="tittle">User</h1>
+
+<div class="form">
+  <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit($event)">
+    <input class="form--controls" type="text" formControlName="username" placeholder="username">
+    <input class="form--controls" type="text" formControlName="name" placeholder="name">
+    <input class="form--controls" type="text" formControlName="mail" placeholder="mail">
+    <input class="form--controls" type="file" (change)="uploadFile($event)" accept="image/png, image/jpeg">
+    <button class="form--btn btn" type="submit">submit</button>
+  </form>
+</div>

@@ -37,7 +37,7 @@
     font-family: 'calibri';
     color: white;
     box-shadow: 7px 13px 37px var(--blackColor);
-         
+
          h4{
             font-size: 22px;
             margin-bottom: 20px;
@@ -67,7 +67,7 @@
     font-family: 'calibri';
     font-size: 18px;
     color: var(--whiteColor);
-    
+
 }
 
 
@@ -97,7 +97,7 @@
 
 .question-box{
     margin-left: 5px;
-    
+
 }
 
 @media (max-width: 1024px){
@@ -125,12 +125,12 @@
         background: var(--mainColor);
     }
 
-    .from-register{     
+    .from-register{
              h4{
                 font-size: 20px;
                 text-align: center;
             }
-    
+
             p{
                 text-align: center;
                 font-size: 17px;
@@ -149,15 +149,15 @@
         padding: 10px 0px;
     }
 
-   
-    
+
+
     .from-register{
-        width: 200px;      
+        width: 200px;
              h4{
                 font-size: 17px;
                 text-align: center;
             }
-    
+
             p{
                 text-align: center;
                 font-size: 17px;
@@ -168,7 +168,7 @@
         width: 95%;
         font-size: 17px;
     }
-    
+
     .from-register .botons{
         font-size: 15px;
     }
