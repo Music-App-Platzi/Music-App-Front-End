@@ -1,0 +1,28 @@
+<h2>User Data: </h2>
+<div class="table--responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>username</th>
+        <th>name</th>
+        <th>mail</th>
+        <th>Option</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <td>{{user.username}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.mail}}</td>
+        <td>
+          <a class="btn table--btn" [routerLink]="['edit',user.id]">
+            Edit
+          </a>
+          <a class="btn table--btn btn-danger">
+            Delete
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
