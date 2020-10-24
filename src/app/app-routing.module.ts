@@ -3,6 +3,8 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { LayoutComponent } from './layout/layout.component';
 
+import { UserGuard } from './utils/user.guard';
+
 const routes: Routes = [
   {
     path: '',
@@ -19,6 +21,7 @@ const routes: Routes = [
       },
       {
         path: '',
+        canActivate: [UserGuard],
         loadChildren: () => import ('./profile/profile.module').then(m => m.ProfileModule)
       }
   ]

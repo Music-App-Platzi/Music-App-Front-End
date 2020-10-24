@@ -1,7 +1,7 @@
 export interface LoginResponse{
     user: {
         id: number
-        rol_id: boolean,
+        rol_id: number,
         username: string;
         name: string;
         mail: string;
@@ -19,7 +19,7 @@ export interface Register {
 export interface RegisterResponse {
     user: {
         id: number
-        rol_id: boolean,
+        rol_id: number,
         username: boolean;
         name: string;
         mail: string;
