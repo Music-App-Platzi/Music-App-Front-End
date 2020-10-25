@@ -14,10 +14,10 @@
   }
 
   thead th {
-    color: $fontColor;
+    color: var(--mainColor);
   }
 
   tbody td {
-    color: $fontColorA;
+    color: var(--tertiaryColor);
   }
 }
