@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
     if (this.form.valid){
       const formRegister = this.form.value;
       this.authService.createUser(formRegister)
-      .subscribe( () => {
+      .subscribe( user => {
         this.succesfulLRegisterSwal.fire();
       }, () => {
         this.errorRegisterSwal.fire();
@@ -46,7 +46,7 @@ export class RegisterComponent implements OnInit {
   private buildForm(): void{
     this.form = this.formBuilder.group({
       name: ['', [Validators.required]],
-      userName: ['', [Validators.required]],
+      username: ['', [Validators.required]],
       mail: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
       photo: ['', ],
