@@ -10,15 +10,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of users; let i = index">
-        <td>{{user.username}}</td>
-        <td>{{user.name}}</td>
-        <td>{{user.mail}}</td>
+      <tr *ngFor="let user of users?.data">
+        <td>{{user?.username}}</td>
+        <td>{{user?.name}}</td>
+        <td>{{user?.mail}}</td>
         <td>
-          <a class="btn table--btn" [routerLink]="['edit',user.id]">
+          <a class="btn table--btn" [routerLink]="['edit',user?.id]">
             Edit
           </a>
-          <a class="btn table--btn btn-danger">
+          <a class="btn table--btn btn-danger" (click)="delateUser(user?.id)">
             Delete
           </a>
         </td>
