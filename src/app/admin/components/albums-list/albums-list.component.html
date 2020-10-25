@@ -1,0 +1,28 @@
+<h2>Album Data: </h2>
+<div class="table--responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>artist</th>
+        <th>release date</th>
+        <th>Option</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let album of albums; let i = index">
+        <td>{{album.name}}</td>
+        <td>{{album.artist_id}}</td>
+        <td>{{album.release_date}}</td>
+        <td>
+          <a class="btn table--btn" [routerLink]="['edit',album.id]">
+            Edit
+          </a>
+          <a class="btn table--btn btn-danger">
+            Delete
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
