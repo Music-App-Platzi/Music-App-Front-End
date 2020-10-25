@@ -28,6 +28,8 @@
             <img src="assets/images/User.jpg" alt="Not found" />
           </a>
         </li>
+        <p> {{userInfo?.user.username}} </p>
+        <pre>{{userInfo | json}}</pre>
         <li><a routerLink="login" *ngIf="!userInfo?.is_user">Login</a></li>
         <li><a routerLink="profile" *ngIf="userInfo?.is_user">Profile</a></li>
         <li><a routerLink="register"*ngIf="!userInfo?.is_user"> Register</a></li>
