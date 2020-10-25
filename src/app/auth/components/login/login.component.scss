@@ -1,12 +1,12 @@
 .container-body{
     width: 100%;
     min-height: 100vh;
-    background: var(--mainColor);
+    background: linear-gradient(var(--fiveColor),var(--tertiaryColor));
     padding: 30px;
 }
 .return{   
     display: block;
-    background: linear-gradient(50deg, var(--mainFristColor), var(--mainColor));
+    background: linear-gradient(50deg, var(--mainFristColor), var(--mainSecondColor));
     padding: 28px 30px;
     text-align: center;
     margin: auto;
@@ -30,14 +30,14 @@
     box-shadow: 0px 30px 5px -15px rgba(0, 0, 0, 0.3);
 }
 .from-register{
-    background: var(--mainSecondColor);
+    background: var(--fiveColor);
     padding: 30px;
     margin: auto;
     margin-top: 25px;
     border-radius: 4px;
     font-family: 'calibri';
     color: white;
-    box-shadow: 7px 13px 37px var(--blackColor);
+    box-shadow: 7px 13px 37px black;
 
     color: var(--whiteColor);
     box-shadow: 7px 13px 37px #000;
@@ -66,33 +66,19 @@
             padding: 10px;
             border-radius: 4px;
             margin-bottom: 16px;
-            border: 1px solid var(--mainColor);
+            border: 1px solid var(--mainFristColor);
             font-family: 'calibri';
             font-size: 18px;
             color: var(--whiteColor);   
         }
 }
 
-
-.controls{
-    width: 100%;
-    background: var(--mainSecondColor);
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid var(--mainColor);
-    font-family: 'calibri';
-    font-size: 18px;
-    color: var(--whiteColor);
-
+.check-box{
+    margin-left: 2px;  
 }
-
-
-label:hover{
-    background: rgba(0, 117, 217, 0.7);
-};
-
-
+.question-box{
+    margin-left: 10px;
+}
 .from-register a:hover {
     color:var(--whiteColor);
     text-decoration: underline;
@@ -100,8 +86,9 @@ label:hover{
 
 .from-register .botons{
     width: 100%;
-    background: var(--mainColor);
+    background: var(--mainFristColor);
     border: none;
+    border-radius: 5px;
     padding: 12px;
     color:var(--whiteColor);
     margin: 10px 0;
@@ -111,7 +98,7 @@ label:hover{
 }
 
 .from-register .botons:hover{
-    background: rgba(0, 117, 217, 0.7);
+    background: var(--mainColor);
 }
 
 .login-button-container{
@@ -121,112 +108,5 @@ label:hover{
     justify-content: center;
   }
   
-  .googlebuton{
-    width: 200px;
-    text-align: center;
-    padding: 1px 0 1px 5px;
-    font-size: 16px;
-    font-family: 'calibri';
-    margin: 10px;
-    background: var(--mainColor);
-    color:var(--whiteColor);
-    display: flex;
-    align-items: center;
-    border-radius: 1px;
-    text-decoration: none;
-    transition: .2s;
-  }
-  
-  .googlebuton:hover{
-    background: rgba(0, 117, 217, 0.7);
-    text-decoration: none;
-  }
-  
-  .googlebuton img{
-    width: 38px;
-    height: 38px;
-    margin-right: 7px;
-  }
-  
-  .googlebuton  span{
-    vertical-align: middle;
-    padding-bottom: 2px;
-    margin-left: 5px;
 
-}
-
-@media (max-width: 1024px){
-    .container-body{
-        width: 100%;
-        height: auto;
-     }
-}
-
-@media (max-width: 767px){
-    .container-body{
-       width: 100%;
-       height: auto;
-    }
-}
-@media (max-width: 586px){
-    .container-body{
-        width: 100%;
-        height: auto;
-    }
-}
-@media (max-width: 480px){
-    .container-body{
-        height: auto;
-        background: var(--mainColor);
-    }
-
-    .from-register{
-             h4{
-                font-size: 20px;
-                text-align: center;
-            }
-
-            p{
-                text-align: center;
-                font-size: 17px;
-            }
-    }
-
-    .controls{
-        width: 95%;
-        font-size: 18px;
-    }
-}
-@media (max-width: 320px){
-    .container-body{
-        width: 100%;
-        height: auto;
-        padding: 10px 0px;
-    }
-
-
-
-    .from-register{
-        width: 200px;
-             h4{
-                font-size: 17px;
-                text-align: center;
-            }
-
-            p{
-                text-align: center;
-                font-size: 17px;
-            }
-    }
-
-    .controls{
-        width: 95%;
-        font-size: 17px;
-    }
-
-    .from-register .botons{
-        font-size: 15px;
-    }
-
-}
 
