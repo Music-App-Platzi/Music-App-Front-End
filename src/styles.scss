@@ -1,4 +1,5 @@
 @import "assets/scss/variable";
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import "assets/scss/global";
+@import "assets/scss/buttons";
+@import "assets/scss/tables";
+@import "assets/scss/global";

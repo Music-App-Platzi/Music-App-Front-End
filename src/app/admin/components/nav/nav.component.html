@@ -1,0 +1,21 @@
+<nav class="admin-nav">
+  <div class="admin-nav--logo">
+    <a routerLink="/home">
+      <img src="assets/images/Logo.jpg" alt="LogoMusicApp" />
+    </a>
+  </div>
+  <a class="btn admin-nav--btn" routerLinkActive="admin-nav--btn__active" routerLink="./users">
+    Users
+  </a>
+  <a class="btn admin-nav--btn" routerLinkActive="admin-nav--btn__active" routerLink="./artist">
+    Artist
+  </a>
+  <a class="btn admin-nav--btn" routerLinkActive="admin-nav--btn__active" routerLink="./albums">
+    Albums
+  </a>
+  <a class="btn admin-nav--btn" routerLinkActive="admin-nav--btn__active" routerLink="./songs">
+    Songs
+  </a>
+  <button class="btn admin-nav--btn" (click)="logout()">Salir</button>
+</nav>
+<router-outlet></router-outlet>
