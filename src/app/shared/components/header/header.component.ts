@@ -20,9 +20,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     const user: any = JSON.parse(sessionStorage.getItem('user'));
-    console.log(user);
+    // console.log(user);
     if (user){
-      this.userInfo = user.userInfo;
+      this.userInfo = user.user;
+      console.log(this.userInfo);
     }
   }
 
