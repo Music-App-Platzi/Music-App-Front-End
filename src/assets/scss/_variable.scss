@@ -1,31 +1,9 @@
-$mainColor: #123f97;
-$mainFristColor:#4a7ff7;
-$mainSecondColor: #222f39;
-$secondaryColor: #d21e18;
-$tertiaryColor: #fdc101;
-$tertiaryColorFont: #604500;
-$whiteColor:#fff;
-$grayColor: #d1d1d1;
-$grayColor-2: #EAEAEA;
-$fontColor: #474747;
-$titleColor: $mainColor;
-
-// media query
-    $breakpoint-tablet: 48em;
-    $breakpoint-desktop: 64em;
-    $breakpoint-desktop-lg: 75em;
-
 :root {
-    --blackColor:#333;
-    --whiteColor:#fff;
-    --mainColor: #174193;
-    --mainSecondColor: #222f39;
-    --mainFristColor:#4a7ff7;
-    --secondaryColor: #d21e18;
-    --tertiaryColor: #fdc101;
-    --tertiaryColorFont: #604500;
-    --grayColor: #d1d1d1;
-    --grayColor-2: #EAEAEA;
-    --fontColor: #474747;
-    --titleColor: var(--mainColor);
+  --mainColor: #81709B;
+  --mainSecondColor: #2B324D;
+  --mainFristColor: #607EB0;
+  --tertiaryColor: #6B5A79;
+  --fourthColor: #4A4C6B;
+  --fiveColor: #2B324d;
+  --whiteColor: #fff;
 }
