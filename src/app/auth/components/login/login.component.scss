@@ -36,6 +36,9 @@
     margin-top: 25px;
     border-radius: 4px;
     font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px var(--blackColor);
+
     color: var(--whiteColor);
     box-shadow: 7px 13px 37px #000;
      width:100%;
@@ -70,9 +73,25 @@
         }
 }
 
+
+.controls{
+    width: 100%;
+    background: var(--mainSecondColor);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid var(--mainColor);
+    font-family: 'calibri';
+    font-size: 18px;
+    color: var(--whiteColor);
+
+}
+
+
 label:hover{
     background: rgba(0, 117, 217, 0.7);
 };
+
 
 .from-register a:hover {
     color:var(--whiteColor);
@@ -133,4 +152,81 @@ label:hover{
     vertical-align: middle;
     padding-bottom: 2px;
     margin-left: 5px;
-  }
+
+}
+
+@media (max-width: 1024px){
+    .container-body{
+        width: 100%;
+        height: auto;
+     }
+}
+
+@media (max-width: 767px){
+    .container-body{
+       width: 100%;
+       height: auto;
+    }
+}
+@media (max-width: 586px){
+    .container-body{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 480px){
+    .container-body{
+        height: auto;
+        background: var(--mainColor);
+    }
+
+    .from-register{
+             h4{
+                font-size: 20px;
+                text-align: center;
+            }
+
+            p{
+                text-align: center;
+                font-size: 17px;
+            }
+    }
+
+    .controls{
+        width: 95%;
+        font-size: 18px;
+    }
+}
+@media (max-width: 320px){
+    .container-body{
+        width: 100%;
+        height: auto;
+        padding: 10px 0px;
+    }
+
+
+
+    .from-register{
+        width: 200px;
+             h4{
+                font-size: 17px;
+                text-align: center;
+            }
+
+            p{
+                text-align: center;
+                font-size: 17px;
+            }
+    }
+
+    .controls{
+        width: 95%;
+        font-size: 17px;
+    }
+
+    .from-register .botons{
+        font-size: 15px;
+    }
+
+}
+
