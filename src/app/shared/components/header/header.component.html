@@ -20,15 +20,10 @@
             <img src="assets/images/User.jpg" alt="Not found" />
           </a>
         </li>
-        <li><a routerLink="#">Home</a></li>
-        <li><a routerLink="login">Login</a></li>
-        <li><a routerLink="profile">Profile</a></li>
-        <li><a routerLink="register"> Register</a></li>
-        <!-- <li><a (click)="signOff()"> Cerrar Sesión</a></li> -->
         <li><a routerLink="/home">Home</a></li>
-        <li><a routerLink="login" *ngIf="!user?.rol_id">Login</a></li>
+        <li><a routerLink="auth/login" *ngIf="!user?.rol_id">Login</a></li>
         <li><a routerLink="profile" *ngIf="user?.rol_id">Profile</a></li>
-        <li><a routerLink="register"*ngIf="!user?.rol_id"> Register</a></li>
+        <li><a routerLink="auth/register"*ngIf="!user?.rol_id"> Register</a></li>
         <li><a (click)="signOff()"*ngIf="user?.rol_id"> Cerrar Sesión</a></li>
       </ul>
     </nav>

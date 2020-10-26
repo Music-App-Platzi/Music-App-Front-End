@@ -17,19 +17,19 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: 'home',
+        path: '',
         loadChildren: () => import ('./home/home.module').then(m => m.HomeModule)
       },
       {
         path: '',
-        canActivate: [AdminGuard],
+        canActivate: [UserGuard],
         loadChildren: () => import ('./profile/profile.module').then(m => m.ProfileModule)
       }
   ]
   },
   {
     path: 'admin',
-    canActivate: [UserGuard],
+    canActivate: [AdminGuard],
     loadChildren: () => import ('./admin/admin.module').then(m => m.AdminModule)
   },
   {
