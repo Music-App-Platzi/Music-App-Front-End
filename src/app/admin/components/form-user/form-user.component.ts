@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { finalize } from 'rxjs/operators';
+import { UsersService } from './../../../core/users.service';
 
 @Component({
   selector: 'app-form-user',
@@ -10,7 +11,7 @@ import { finalize } from 'rxjs/operators';
 })
 export class FormUserComponent implements OnInit {
 
-  id: string;
+  id: any;
 
   addressForm = this.fb.group({
     username: [null, Validators.compose([
@@ -32,12 +33,17 @@ export class FormUserComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private activeRoute: ActivatedRoute
+    private activeRoute: ActivatedRoute,
+    private usersService: UsersService
   ) { }
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe((params: Params) => {
       this.id = params.id;
+      this.usersService.getUser(this.id)
+      .subscribe(user => {
+        this.addressForm.patchValue(user);
+      });
       console.log(this.id);
     });
   }
@@ -51,6 +57,11 @@ export class FormUserComponent implements OnInit {
   onSubmit(event: Event): void {
     event.preventDefault();
     if (this.addressForm.valid) {
+      const user = this.addressForm.value;
+      this.usersService.updateUser(this.id, user)
+      .subscribe((update) => {
+        console.log(update);
+      });
       console.table(this.addressForm.value);
     }
   }
