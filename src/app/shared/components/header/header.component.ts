@@ -12,24 +12,23 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   toShow: any;
-  userInfo: LoginResponse;
+  user: LoginResponse;
 
   constructor(
     private route: Router
   ) { }
 
   ngOnInit(): void {
-    const user: any = JSON.parse(sessionStorage.getItem('user'));
-    // console.log(user);
-    if (user){
-      this.userInfo = user.user;
-      console.log(this.userInfo);
+    let userData: any = sessionStorage.getItem('user');
+    userData = JSON.parse(userData);
+    if (userData){
+      this.user = userData.user;
     }
   }
 
   signOff(): void{
     sessionStorage.clear();
-    this.userInfo = null;
+    this.user = null;
     this.route.navigate(['/home']);
   }
 

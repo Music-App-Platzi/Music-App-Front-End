@@ -1,13 +1,11 @@
 export interface LoginResponse{
-    user: {
-        id: number
-        rol_id: number,
+        id: number;
+        rol_id: number;
         username: string;
         name: string;
         mail: string;
         password: string;
         thumbnail: string;
-    };
     token: string;
     is_user: boolean;
 }
