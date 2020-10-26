@@ -1,26 +1,25 @@
 <div class="slider">
-    <ul>
-        <li *ngFor="let img of images">
-          <img [src]="img" alt="Imagen del Banner">
-        </li>
-    </ul>
+  <ul>
+    <li *ngFor="let img of images">
+      <img [src]="img" alt="Imagen del Banner">
+    </li>
+  </ul>
 </div>
 
-
+<h1 class="carousel--h1">Featured Tracks</h1>
 <section class="carousel">
-  <h1>Featured Tracks</h1>
   <div class="carousel__container">
-      <div class="carousel-item" *ngFor="let images of imagesCarousel" >
-          <img class="carousel-item__img" [src]="images" alt="">
-          <div class="carousel-item__details">
-              <div>
-                  <img src="./../../../../assets/img__carrousel/play-icon.png" alt="">
-                  <img src="./../../../../assets/img__carrousel/plus-icon.png" alt="">
-              </div>
-              <p class="carousel-item__details--title">Nombre Canción</p>
-              <p class="carousel-item__details--subtitle">Grupo</p>
-          </div>                
+    <div class="carousel-item" *ngFor="let images of imagesCarousel">
+      <img class="carousel-item__img" [src]="images" alt="">
+      <div class="carousel-item__details">
+        <div>
+          <img src="./../../../../assets/img__carrousel/play-icon.png" alt="">
+          <img src="./../../../../assets/img__carrousel/plus-icon.png" alt="">
+        </div>
+        <p class="carousel-item__details--title">Nombre Canción</p>
+        <p class="carousel-item__details--subtitle">Grupo</p>
       </div>
+    </div>
   </div>
 </section>
 

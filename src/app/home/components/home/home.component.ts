@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit {
     'assets/img__carrousel/image_carousel.jpg',
   ];
 
-
   users = [
     {
       id: '1',
