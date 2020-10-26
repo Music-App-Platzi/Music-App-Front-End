@@ -22,14 +22,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        canActivate: [AdminGuard],
+        canActivate: [UserGuard],
         loadChildren: () => import ('./profile/profile.module').then(m => m.ProfileModule)
       }
   ]
   },
   {
     path: 'admin',
-    canActivate: [UserGuard],
+    canActivate: [AdminGuard],
     loadChildren: () => import ('./admin/admin.module').then(m => m.AdminModule)
   },
   {
