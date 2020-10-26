@@ -1,23 +1,15 @@
 <header>
   <!-- LOGO -->
-  <div class="container-logo">
+  <!-- <div class="container-logo">
     <img src="assets/images/Logo.jpg" class="logo" alt="LogoMusicApp" />
-  </div>
+  </div> -->
 
   <div class="container-nav">
 
     <!-- SEARCH SONGS -->
     <div class="search-songs">
-      <input
-        type="image"
-        src="assets/images/Serch.svg"
-        class="search-songs--image"
-      />
-      <input
-        type="text"
-        class="search-songs--input"
-        placeholder="Search your entertainment"
-      />
+      <input type="image" src="assets/images/Search.png" class="search-songs--image" />
+      <input type="text" class="search-songs--input" placeholder="Search your entertainment" />
     </div>
 
     <!-- MENU -->
@@ -28,6 +20,11 @@
             <img src="assets/images/User.jpg" alt="Not found" />
           </a>
         </li>
+        <li><a routerLink="#">Home</a></li>
+        <li><a routerLink="login">Login</a></li>
+        <li><a routerLink="profile">Profile</a></li>
+        <li><a routerLink="register"> Register</a></li>
+        <!-- <li><a (click)="signOff()"> Cerrar Sesión</a></li> -->
         <li><a routerLink="/home">Home</a></li>
         <li><a routerLink="login" *ngIf="!user?.rol_id">Login</a></li>
         <li><a routerLink="profile" *ngIf="user?.rol_id">Profile</a></li>

@@ -1,0 +1,8 @@
+<h1 class="tittle">Artist</h1>
+
+<div class="form">
+  <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit($event)">
+    <input class="form--controls" type="text" formControlName="name" placeholder="name">
+    <button class="form--btn btn" type="submit">submit</button>
+  </form>
+</div>

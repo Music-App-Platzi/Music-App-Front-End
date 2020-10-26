@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+}
+
+.main {
+  flex-grow: 1;
+  height: calc(100vh - 5.2em);
+  overflow: auto;
+}

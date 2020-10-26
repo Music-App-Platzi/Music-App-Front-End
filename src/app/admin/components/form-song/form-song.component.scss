@@ -1,0 +1,48 @@
+:host {
+  flex-grow: 1;
+  min-height: 100vh;
+  background: var(--mainColor);
+  padding: 30px;
+}
+
+.tittle {
+  color: #fff;
+}
+
+.form {
+  background: var(--mainSecondColor);
+  padding: 30px;
+  margin: auto;
+  margin-top: 25px;
+  border-radius: 4px;
+  font-family: "calibri";
+  color: var(--whiteColor);
+  box-shadow: 7px 13px 37px #000;
+  width: 100%;
+  @media (min-width: 480px) {
+    width: 400px;
+  }
+
+  &--controls {
+    width: 100%;
+    background: var(--mainSecondColor);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid var(--mainColor);
+    font-family: "calibri";
+    font-size: 18px;
+    color: var(--whiteColor);
+  }
+
+  &--btn {
+    width: 100%;
+    background: var(--mainColor);
+    border: none;
+    padding: 12px;
+    color: var(--whiteColor);
+    margin: 10px 0;
+    font-size: 16px;
+    transition: 0.2s;
+  }
+}
