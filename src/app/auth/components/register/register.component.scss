@@ -1,12 +1,12 @@
 .container-body{
     width: 100%;
     min-height: 100vh;
-    background: var(--mainColor);
+    background: linear-gradient(var(--fiveColor),var(--tertiaryColor));
     padding: 30px;
 }
 .return{   
     display: block;
-    background: linear-gradient(50deg, var(--mainFristColor), var(--mainColor));
+    background: linear-gradient(50deg, var(--mainFristColor), var(--mainSecondColor));
     padding: 28px 30px;
     text-align: center;
     margin: auto;
@@ -31,7 +31,7 @@
 }
 .from-register{
     // height: 520px;
-    background: var(--mainSecondColor);
+    background: var(--fiveColor);
     padding: 30px;
     margin: auto;
     margin-top: 25px;
@@ -68,7 +68,7 @@
             padding: 10px;
             border-radius: 4px;
             margin-bottom: 16px;
-            border: 1px solid var(--mainColor);
+            border: 1px solid var(--mainFristColor);
             font-family: 'calibri';
             font-size: 18px;
             color: var(--whiteColor);   
@@ -109,8 +109,9 @@ label:hover{
 
 .from-register .botons{
     width: 100%;
-    background: var(--mainColor);
+    background: var(--mainFristColor);
     border: none;
+    border-radius: 5px;
     padding: 12px;
     color:var(--whiteColor);
     margin: 10px 0;
@@ -120,7 +121,7 @@ label:hover{
 }
 
 .from-register .botons:hover{
-    background: rgba(0, 117, 217, 0.7);
+    background: var(--mainColor);
 }
 
 .login-button-container{
@@ -137,17 +138,17 @@ label:hover{
     font-size: 16px;
     font-family: 'calibri';
     margin: 10px;
-    background: var(--mainColor);
+    background: var(--mainFristColor);
     color:var(--whiteColor);
     display: flex;
     align-items: center;
-    border-radius: 1px;
+    border-radius: 5px;
     text-decoration: none;
     transition: .2s;
   }
   
   .googlebuton:hover{
-    background: rgba(0, 117, 217, 0.7);
+    background:var(--mainColor);
     text-decoration: none;
   }
   

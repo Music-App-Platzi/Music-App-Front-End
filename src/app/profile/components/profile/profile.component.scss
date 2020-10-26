@@ -8,21 +8,23 @@
 .sub-container{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(#2B324D,#6B5A79);
+    margin-top: 25px;
+    background: linear-gradient(var(--fiveColor),var(--tertiaryColor));
     border-radius: 5px;
-    padding: 30px 50px;
+    padding: 50px 30px;
 
         @media (max-width: 375px){
             padding: 30px 10px;
         } 
         @media (max-width: 320px){
-            width: 100vw;
+            width: auto;
         } 
 }
 
 .profile-image{
     height: 250px;
     display: flex;
+    margin-left: 40px;
     img{
         width: 150px;
         height: 150px;
@@ -32,16 +34,26 @@
     @media (max-width: 540px){
         display: block;
         text-align: center;
-  } 
+    }
+    @media (max-width: 375px){
+        margin-left: 0;
+    } 
+    @media (max-width: 320px){
+        margin-left: 0;
+    } 
 }
 
 
 .user-name{
     width: 100%;
-    padding: 35px 0;
-    color: #fff;
+    padding: 35px 0px 80px 50px;
+    color: var(--whiteColor);
     h1{
         font-size: 45px;
+        margin-top: 20px;
+        @media (max-width: 320px){
+            font-size: 35px;
+        } 
     }
 
     .admin-button{
@@ -58,27 +70,32 @@
         a{
             width: 90px;
             text-align: center;
-            color: #fff;
+            color: var(--whiteColor);
             text-decoration: none;
         }
         @media (max-width: 540px){
             margin-top: 25px;
       } 
+      
     }
 
     .admin-button:hover{
-        background: #607EB0;
+        background: var(--mainFristColor);
     }
     @media (max-width: 540px){
         padding: 15px 0;
   } 
+  @media (max-width: 320px){
+    
+} 
 }
 
 
 
 .admin-menu{
     height: 30px;
-    padding: 30px;
+    margin-top: 20px;
+    padding: 0 50px;
     display: flex;
     justify-content: space-around;
     a{
@@ -86,30 +103,36 @@
         text-decoration: none;
     }
     @media (max-width: 540px){
-        margin-top: 100px;
-        padding: 30px 0;
-  } 
+        margin-top: 130px;
+        padding: 0;
+    } 
+     @media (max-width: 320px){
+        font-size: 11px;
+    }
 }
 
 .admin-menu a:hover{
-    color: #fff;
-    border-bottom: 3px solid #607EB0;
+    color: var(--whiteColor);
+    border-bottom: 3px solid var(--mainFristColor);
 }
 
 .album-image{
     height: 600px;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-left: 40px;
-    color: #fff;
+    color: var(--whiteColor);
     a{
         color:rgb(141, 141, 141);
         text-decoration: none;
     }
     @media (max-width: 540px){
         text-align: center;
-  } 
-  @media (max-width: 375px){
-    text-align: center;
-    margin: 0;
-} 
+    } 
+    @media (max-width: 375px){
+        text-align: center;
+        margin: 0;
+    } 
+    @media (max-width: 320px){
+        margin-top: 50px;
+    }
 }
