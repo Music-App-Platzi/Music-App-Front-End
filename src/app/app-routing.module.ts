@@ -3,6 +3,9 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { LayoutComponent } from './layout/layout.component';
 
+import { UserGuard } from './utils/user.guard';
+import { AdminGuard } from './utils/admin.guard';
+
 const routes: Routes = [
   {
     path: '',
@@ -19,12 +22,14 @@ const routes: Routes = [
       },
       {
         path: '',
+        canActivate: [AdminGuard],
         loadChildren: () => import ('./profile/profile.module').then(m => m.ProfileModule)
       }
   ]
   },
   {
     path: 'admin',
+    canActivate: [UserGuard],
     loadChildren: () => import ('./admin/admin.module').then(m => m.AdminModule)
   },
   {

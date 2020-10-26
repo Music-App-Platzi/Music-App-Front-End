@@ -22,9 +22,9 @@ export class AuthService {
     const data = {mail, password}
     return this.http.post<LoginResponse>(`${environment.api}auth/login`, data)
     .pipe(
-      tap(( dataTk: LoginResponse) => {
-        const token = dataTk.token;
-        sessionStorage.setItem('user', JSON.stringify(dataTk));
+      tap(( data: LoginResponse) => {
+        const token = data.token;
+        sessionStorage.setItem('user', JSON.stringify(data));
         this.token.saveToken(token);
       })
     );
