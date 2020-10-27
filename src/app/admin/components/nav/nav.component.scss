@@ -3,8 +3,8 @@
 }
 
 .admin-nav {
-  width: 12em;
-  border-right: var(--grayColor) solid 2px;
+  width: var(--widthNavbar);
+  background-color: var(--navbar);
   height: 100vh;
 
   &--logo {
