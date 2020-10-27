@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MusicService } from './../../../core/music.service';
+import { ArtistsResponse } from './../../../models/music.model';
+
 @Component({
   selector: 'app-artist-list',
   templateUrl: './artist-list.component.html',
@@ -7,20 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtistListComponent implements OnInit {
 
-  artist = [
-    {
-      id: '1',
-      name: 'nombre 1',
-    },
-    {
-      id: '2',
-      name: 'nombre 2',
-    }
-  ];
+  artists: ArtistsResponse;
 
-  constructor() { }
+  constructor(
+    private musicService: MusicService
+  ) { }
 
   ngOnInit(): void {
+    this.allArtists();
+  }
+
+  allArtists(): void{
+    this.musicService.allArtists()
+    .subscribe ( artists => {
+      this.artists = artists;
+    });
+  }
+  delateArtist(id): void{
+    this.musicService.delateArtist(id)
+    .subscribe(res => {
+      console.log(res);
+      this.allArtists();
+    })
   }
 
 }

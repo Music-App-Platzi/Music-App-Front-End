@@ -19,6 +19,12 @@ export class UsersService {
   allUsers(): Observable<UserResponse>{
     return this.http.get<UserResponse>(`${environment.api}users`);
   }
+  getUser(id): Observable<UserResponse>{
+    return this.http.get<UserResponse>(`${environment.api}users/${id}`);
+  }
+  updateUser(id: number, changes: Partial<UserResponse>): Observable<UserResponse>{
+    return this.http.put<UserResponse>(`${environment.api}users/${id}`, changes);
+  }
   delateUser(id: UserResponse): Observable<UserResponse>{
     console.log(id);
     return this.http.delete<UserResponse>(`${environment.api}users/${id}`);

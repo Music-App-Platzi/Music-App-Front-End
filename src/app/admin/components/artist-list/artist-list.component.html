@@ -8,13 +8,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let artis of artist; let i = index">
-        <td>{{artis.name}}</td>
+      <tr *ngFor="let artis of artists?.data">
+        <td>{{artis?.name}}</td>
         <td>
           <a class="btn table--btn" [routerLink]="['edit',artis.id]">
             Edit
           </a>
-          <a class="btn table--btn btn-danger">
+          <a class="btn table--btn btn-danger" (click)="delateArtist(artis.id)" >
             Delete
           </a>
         </td>
