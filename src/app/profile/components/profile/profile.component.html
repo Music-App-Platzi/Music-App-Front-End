@@ -3,13 +3,14 @@
    <div class="sub-container">
         <div class="profile-image">
             <figure>
-                <img src="assets/icon/perfil-sin-fondo.png" alt="">
+                <img src="assets/icon/perfil-sin-fondo.png" alt="" *ngIf="user.thumbnail == null">
+                <img [src]="user?.thumbnail" *ngIf="user.thumbnail !== null" alt="img-profile">
             </figure>
            <div class="user-name">
             <p>user</p>
-            <h1>Jcamiloguerrero</h1>
+            <h1>{{user?.username}}</h1>
                 <div class="admin-button">
-                    <a href="#">Adim</a>
+                    <a routerLink="/admin/users">Adim</a>
                 </div>
            </div>
         </div>

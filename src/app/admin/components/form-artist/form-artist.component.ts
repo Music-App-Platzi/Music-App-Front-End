@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { finalize } from 'rxjs/operators';
+import { MusicService } from './../../../core/music.service';
 
 @Component({
   selector: 'app-form-artist',
@@ -10,10 +11,10 @@ import { finalize } from 'rxjs/operators';
 })
 export class FormArtistComponent implements OnInit {
 
-  id: string;
+  id: any;
 
   addressForm = this.fb.group({
-    name: [null, Validators.compose([
+    name: ['', Validators.compose([
       Validators.required, Validators.maxLength(100)])
     ]
   });
@@ -21,12 +22,17 @@ export class FormArtistComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private activeRoute: ActivatedRoute
+    private activeRoute: ActivatedRoute,
+    private musicService: MusicService
   ) { }
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe((params: Params) => {
       this.id = params.id;
+      this.musicService.getArtist(this.id)
+      .subscribe(artist => {
+        this.addressForm.patchValue(artist);
+      });
       console.log(this.id);
     });
   }
@@ -34,7 +40,11 @@ export class FormArtistComponent implements OnInit {
   onSubmit(event: Event): void {
     event.preventDefault();
     if (this.addressForm.valid) {
-      console.table(this.addressForm.value);
+      const artist = this.addressForm.value;
+      this.musicService.updateArtist(this.id, artist)
+      .subscribe((update) => {
+        console.log(update);
+      });
     }
   }
 
