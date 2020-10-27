@@ -1,10 +1,43 @@
 
 .container{
     max-width: 100%;
+   
 }
 
 .sub-container{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient( #81709B, #607EB0,   #4A4C6B);
+    background: hsl(228, 27%, 13%);
+    padding-top: 30px;
+}
+
+.artist-container{
+    width: 900px;
+    height: 387px;
+    margin: auto;
+    background-image: url("../../../../assets/images/artist.jpg");
+    background-size:  cover;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.list-artist-container{
+    width: 380px;
+    height: 387px;
+    background:hsl(222, 46%, 15%, 0.7);
+    h1{
+        color: white;
+    }
+}
+
+.table th{
+    color: white;
+}
+
+.filter-artist{
+    width: 100%;
+    h2{
+        color: wheat;
+    }
 }
