@@ -10,15 +10,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let album of albums; let i = index">
-        <td>{{album.name}}</td>
-        <td>{{album.artist_id}}</td>
-        <td>{{album.release_date}}</td>
+      <tr *ngFor="let album of albums?.data; let i = index">
+        <td>{{album?.name}}</td>
+        <td>{{album?.artist_id}}</td>
+        <td>{{album?.release_date}}</td>
         <td>
           <a class="btn table--btn" [routerLink]="['edit',album.id]">
             Edit
           </a>
-          <a class="btn table--btn btn-danger">
+          <a class="btn table--btn btn-danger" (click)="delateAlbum(album.id)">
             Delete
           </a>
         </td>
