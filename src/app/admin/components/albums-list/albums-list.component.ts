@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MusicService } from './../../../core/music.service';
+import { AlbumsResponse } from './../../../models/music.model';
+
 @Component({
   selector: 'app-albums-list',
   templateUrl: './albums-list.component.html',
@@ -7,24 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlbumsListComponent implements OnInit {
 
-  albums = [
-    {
-      id: '1',
-      artist_id: '1',
-      name: 'album 1',
-      release_date: '12-12-2012'
-    },
-    {
-      id: '2',
-      artist_id: '2',
-      name: 'albun 2',
-      release_date: '12-12-2012'
-    }
-  ];
+  albums: AlbumsResponse;
 
-  constructor() { }
+  constructor(
+    private musicService: MusicService
+  ) { }
 
   ngOnInit(): void {
+    this.allAlbums();
   }
 
+  allAlbums(): void{
+    this.musicService.allAlbums()
+    .subscribe(albums => {
+      this.albums = albums;
+    });
+  }
+  delateAlbum(id: AlbumsResponse): void{
+    this.musicService.delateAlbum(id)
+    .subscribe(res => {
+      console.log(res);
+      this.allAlbums();
+    })
+  }
 }

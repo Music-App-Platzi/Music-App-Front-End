@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { finalize } from 'rxjs/operators';
+import { MusicService } from './../../../core/music.service';
 
 @Component({
   selector: 'app-form-album',
@@ -10,7 +11,7 @@ import { finalize } from 'rxjs/operators';
 })
 export class FormAlbumComponent implements OnInit {
 
-  id: string;
+  id: any;
 
   addressForm = this.fb.group({
     name: [null, Validators.compose([
@@ -27,12 +28,17 @@ export class FormAlbumComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private activeRoute: ActivatedRoute
+    private activeRoute: ActivatedRoute,
+    private musicService: MusicService
   ) { }
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe((params: Params) => {
       this.id = params.id;
+      this.musicService.getAlbum(this.id)
+      .subscribe(albums => {
+        this.addressForm.patchValue(albums);
+      });
       console.log(this.id);
     });
   }
@@ -40,7 +46,11 @@ export class FormAlbumComponent implements OnInit {
   onSubmit(event: Event): void {
     event.preventDefault();
     if (this.addressForm.valid) {
-      console.table(this.addressForm.value);
+      const albums = this.addressForm.value;
+      this.musicService.updateAlbum(this.id, albums)
+      .subscribe((update) => {
+        console.log(update);
+      })
     }
   }
 
