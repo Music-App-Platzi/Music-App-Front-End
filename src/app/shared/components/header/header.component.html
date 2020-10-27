@@ -1,8 +1,4 @@
 <header>
-  <!-- LOGO -->
-  <!-- <div class="container-logo">
-    <img src="assets/images/Logo.jpg" class="logo" alt="LogoMusicApp" />
-  </div> -->
 
   <div class="container-nav">
 
@@ -16,8 +12,9 @@
     <nav>
       <ul class="nav-right-section">
         <li>
-          <a href="">
-            <img src="assets/images/User.jpg" alt="Not found" />
+          <a href="" *ngIf="user?.rol_id">
+            <img src="assets/icon/perfil-sin-fondo.png" alt="" *ngIf="user?.thumbnail == null">
+            <img [src]="user?.thumbnail" *ngIf="user?.thumbnail !== null" alt="img-profile">
           </a>
         </li>
         <li><a routerLink="/home">Home</a></li>
