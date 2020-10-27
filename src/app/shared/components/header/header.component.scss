@@ -1,7 +1,8 @@
 header {
   display: flex;
   width: 100%;
-  color: var(--fiveColor);
+  position: sticky;
+  top: 0;
 
   nav {
     display: flex;
@@ -9,11 +10,14 @@ header {
 }
 
 .nav-right-section {
-  width: 250px;
   height: auto;
   display: flex;
   list-style: none;
   align-items: center;
+
+  @media (min-width: 540px) {
+    width: 250px;
+  }
 
   img {
     border-radius: 50px;
@@ -28,11 +32,10 @@ header {
 
 .search-songs {
   display: flex;
-  padding-top: 30px;
+  align-items: center;
 
-  @media (max-width: 540px) {
-    order: 1;
-    padding-top: 0;
+  @media (max-width: 700px) {
+    display: none;
   }
 
   &--input {
@@ -43,7 +46,7 @@ header {
     outline: none;
     padding-left: 10px;
     background-color: var(--fourthColor);
-    font-size: white;
+    color: white;
 
     &:hover {
       box-shadow: 0 1px 6px 0 var(--grayColor);
@@ -56,8 +59,10 @@ header {
   }
 
   &--image {
-    padding-bottom: 25px;
-    outline: none;
+    --sizeIcon: 1.8em;
+    height: var(--sizeIcon);
+    width: var(--sizeIcon);
+    margin-right: 1em;
   }
 }
 
@@ -74,7 +79,7 @@ header {
     height: auto;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 700px) {
     width: 200px;
     display: none;
   }
@@ -84,22 +89,22 @@ header {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 97px;
+  height: 4em;
   border: none;
   border-radius: 0;
-  background-color: var(--mainFirstColor);
-  background: linear-gradient(90deg, var(--mainFirstColor) 0%, var(--mainColor) 70%, var(--fourthColor) 100%);
+  background-color: var(--fiveColor);
 
-  @media (max-width: 540px) {
+  @media (max-width: 700px) {
     flex-direction: column;
     align-items: center;
     padding-top: 10px;
-    padding-bottom: 50px;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
   }
-  
+
   ul {
     list-style: none;
-  
+
     li {
       padding-left: 5px;
     }
