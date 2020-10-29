@@ -11,9 +11,11 @@ import { SongsResponse } from './../../../models/music.model';
 export class HomeComponent implements OnInit {
 
   images: string[] = [
-    'assets/img__carrousel/banner-1.jpg',
-    'assets/img__carrousel/banner-2.jpg',
-    'assets/img__carrousel/banner-3.jpg',
+    'assets/img__carrousel/soundMusic.jpg',
+    'assets/img__carrousel/listenMusic.jpg',
+    'assets/img__carrousel/soundMusicBlack.jpg',
+    'assets/img__carrousel/listenNow.jpg',
+
   ];
 
   songs: SongsResponse;
