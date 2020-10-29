@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MusicService } from './../../../core/music.service';
+import { PlayService } from './../../../core/play.service';
 
 @Component({
   selector: 'app-footer',
@@ -14,8 +15,13 @@ export class FooterComponent implements OnInit {
   newTime;
 
   constructor(
-    private musicService: MusicService
-  ) { }
+    private musicService: MusicService,
+    private playService: PlayService
+  ) {
+    this.playService.song$.subscribe(song => {
+      console.log(song);
+    });
+  }
 
   ngOnInit(): void {
   }
@@ -25,6 +31,7 @@ export class FooterComponent implements OnInit {
        this.songs = songs;
      });
    }
+
 
   play(): void{
     this.currentSong = new Audio ('https://s3-us-east-2.amazonaws.com/music-app-platzi-music/4.mp3');

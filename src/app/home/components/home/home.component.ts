@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MusicService } from './../../../core/music.service';
+import { PlayService } from './../../../core/play.service';
 import { SongsResponse } from './../../../models/music.model';
+
 
 @Component({
   selector: 'app-home',
@@ -22,6 +24,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private musicService: MusicService,
+    private playService: PlayService
   ) { }
 
   ngOnInit(): void {
@@ -31,6 +34,13 @@ export class HomeComponent implements OnInit {
     this.musicService.allSongs()
     .subscribe( songs => {
       this.songs = songs;
+    });
+  }
+  playSong(songs: SongsResponse): void {
+    this.playService.playSong(this.songs);
+    this.musicService.getSong(songs)
+    .subscribe (songs => {
+      console.log(songs);
     });
   }
 

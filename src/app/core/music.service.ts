@@ -46,4 +46,7 @@ export class MusicService {
     allSongs(): Observable<SongsResponse>{
       return this.http.get<SongsResponse>(`${environment.api}songs`);
     }
+    getSong(id: SongsResponse): Observable<SongsResponse>{
+      return this.http.get<SongsResponse>(`${environment.api}songs/${id}`);
+    }
 }
