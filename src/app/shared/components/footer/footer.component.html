@@ -10,12 +10,12 @@
     <div class="container__player">
         <mat-icon>replay</mat-icon>
         <mat-icon>skip_previous</mat-icon>
-        <mat-icon>pause_circle_outline</mat-icon>
-        <!-- <mat-icon>play_circle_outline</mat-icon> -->
+        <mat-icon (click)="pause()">pause_circle_outline</mat-icon>
+        <mat-icon (click)="play()">play_circle_outline</mat-icon>
         <mat-icon>skip_next</mat-icon>
         <div class="container__player--progressBar">
         <p>0:00</p>
-        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+        <mat-progress-bar mode="determinate" value="newTime"></mat-progress-bar>
         <p>0:00</p>
         </div>
     </div>

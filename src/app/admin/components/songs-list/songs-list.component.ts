@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MusicService } from './../../../core/music.service';
+import { SongsResponse } from './../../../models/music.model';
+
 @Component({
   selector: 'app-songs-list',
   templateUrl: './songs-list.component.html',
@@ -7,32 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SongsListComponent implements OnInit {
 
-  songs = [
-    {
-      id: '1',
-      album_id: '1',
-      name: 'name 1',
-      duration: '3.15 s',
-      song_link: 'adasdasdas.COM',
-      thumbnail: 'imagen',
-      popularity: 15,
-      genre: 'gense 3'
-    },
-    {
-      id: '2',
-      album_id: '2',
-      name: 'name 2',
-      duration: '3.21 s',
-      song_link: 'adasdasdas.COM',
-      thumbnail: 'imagen',
-      popularity: 11,
-      genre: 'gense 2'
-    }
-  ];
+  songs: SongsResponse;
 
-  constructor() { }
+  constructor(
+    private musicService: MusicService
+  ) { }
 
   ngOnInit(): void {
+    this.allSongs();
   }
 
+  allSongs(): void{
+    this.musicService.allSongs()
+    .subscribe(songs => {
+      console.log(songs);
+      this.songs = songs;
+    });
+  }
 }

@@ -12,3 +12,15 @@ export interface AlbumsResponse {
         release_date: string;
     } [];
 }
+export interface SongsResponse {
+    data: {
+        id: number;
+        album_id: number;
+        name: string;
+        duration: string;
+        song_link: string;
+        thumbnail: string;
+        popularity: number;
+        genre: string;
+    } [];
+}
