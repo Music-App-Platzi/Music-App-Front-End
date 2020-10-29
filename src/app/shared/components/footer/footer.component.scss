@@ -12,6 +12,8 @@
   padding: 10px;
   align-items: center;
   min-width: var(--widthNavbar);
+  border: 1px solid var(--fontColor);
+  border-radius: 5px;
 }
 .container__footer img {
   width: 60px;
@@ -35,8 +37,20 @@
 mat-icon {
   font-size: 30px;
   margin: 10px;
-  color: #ffffff;
+  color: var(--fontColor);
+  cursor: pointer;
+  transition: all .5s ease;
 }
+
+mat-icon:hover{
+  background: rgb(96, 126, 176, 0.7);
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  margin: 0 12px;
+  box-shadow: -1px 0px 25px 0px rgba(96, 126, 176, 0.75);
+}
+
 .container__player--progressBar {
   display: flex;
   justify-content: center;
