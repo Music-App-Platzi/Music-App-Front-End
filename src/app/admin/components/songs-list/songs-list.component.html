@@ -1,0 +1,32 @@
+<h2>Songs Data: </h2>
+<div class="table--responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>album</th>
+        <th>duration</th>
+        <th>popularity</th>
+        <th>genre</th>
+        <th>options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let songs of songs?.data">
+        <td>{{songs?.name}}</td>
+        <td>{{songs?.album_id}}</td>
+        <td>{{songs?.duration}}</td>
+        <td>{{songs?.popularity}}</td>
+        <td>{{songs?.genre}}</td>
+        <td>
+          <a class="btn table--btn" [routerLink]="['edit',songs.id]">
+            Edit
+          </a>
+          <a class="btn table--btn btn-danger">
+            Delete
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

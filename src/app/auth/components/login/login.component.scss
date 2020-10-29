@@ -1,0 +1,108 @@
+.container-body{
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(var(--fiveColor),var(--tertiaryColor));
+  padding: 30px;
+}
+.return{   
+  display: block;
+  background: linear-gradient(50deg, var(--mainFirstColor), var(--mainSecondColor));
+  padding: 28px 30px;
+  text-align: center;
+  margin: auto;
+  color: var(--whiteColor);
+  font-size: 18px;
+  font-family: 'calibri';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  transition: all 300ms;
+  text-decoration: none;
+  width: 100%;
+    @media (min-width: 480px){
+      width: 300px;
+    } 
+
+}
+
+.return:hover{
+  transform: translateY(10px);
+  box-shadow: 0px 30px 5px -15px rgba(0, 0, 0, 0.3);
+}
+.from-register{
+  background: var(--fiveColor);
+  padding: 30px;
+  margin: auto;
+  margin-top: 25px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px black;
+
+  color: var(--whiteColor);
+  box-shadow: 7px 13px 37px #000;
+   width:100%;
+   @media (min-width: 480px){
+    width: 400px;
+  } 
+       h4{
+          font-size: 22px;
+          margin-bottom: 20px;
+      }
+
+      p{
+          text-align: center;
+          font-size: 18px;
+          line-height: 1.2;
+      }
+
+      a{
+          color: var(--whiteColor);
+          text-decoration: none;
+      }
+      &--controls{
+          width: 100%;
+          background: var(--mainSecondColor);
+          padding: 10px;
+          border-radius: 4px;
+          margin-bottom: 16px;
+          border: 1px solid var(--mainFirstColor);
+          font-family: 'calibri';
+          font-size: 18px;
+          color: var(--whiteColor);   
+      }
+}
+.check-box{
+  margin-left: 2px;  
+}
+.question-box{
+  margin-left: 10px;
+}
+.from-register a:hover {
+  color:var(--whiteColor);
+  text-decoration: underline;
+}
+
+.from-register .botons{
+  width: 100%;
+  background: linear-gradient(50deg, var(--mainFirstColor), var(--mainSecondColor));
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  color:var(--whiteColor);
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.from-register .botons:hover{
+  background: var(--mainFirstColor);
+}
+
+.login-button-container{
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}

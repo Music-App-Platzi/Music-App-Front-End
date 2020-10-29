@@ -1,0 +1,38 @@
+<div class="container-body">
+    <a routerLink="/home" class="return">regresar</a>
+    <section class="from-register">
+        <h4>Iniciar Sesion</h4>
+        <form [formGroup]="form">
+            <input class="from-register--controls"type="mail" formControlName="mail" placeholder="Ingresa tu Usuario o Correo">
+            <input class="from-register--controls" type="password" formControlName="password" placeholder="Ingresa tu contraseña">
+            <input type="checkbox" class="check-box"><span class="question-box">Recordar Contraseña</span>
+        </form>
+        <input class="botons" type="submit" value="Entrar" (click)="login($event)">
+        <p><a href="#">¿Olvide mi Contrasña?</a></p>
+    </section>
+</div>
+<ngx-spinner color="white" type = "ball-scale-ripple-multiple">
+    <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+<swal
+  #succesfulLLoginSwal
+  title="succesful Login"
+  text="Welcome enjoy everything that the best music app offers you"
+  icon="success"
+  [focusCancel]="true"
+  (confirm)="goToHome()">
+</swal>
+<swal
+  #errorLoginSwal
+  title="Error Login"
+  text="Oops !! something happened, check your data or try later"
+  icon="error"
+  [focusCancel]="true">
+</swal>
+<swal
+  #notDataSwal
+  title="Error Login"
+  text="Oops !! check the corresponding fields, remember that you must fill them in to start session"
+  icon="error"
+  [focusCancel]="true">
+</swal>

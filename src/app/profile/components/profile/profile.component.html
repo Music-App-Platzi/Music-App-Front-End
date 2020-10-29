@@ -1,0 +1,30 @@
+
+<section class="container">
+   <div class="sub-container">
+        <div class="profile-image">
+            <figure>
+                <img src="assets/icon/perfil-sin-fondo.png" alt="" *ngIf="user.thumbnail == null">
+                <img [src]="user?.thumbnail" *ngIf="user.thumbnail !== null" alt="img-profile">
+            </figure>
+           <div class="user-name">
+            <p>user</p>
+            <h1>{{user?.username}}</h1>
+                <div class="admin-button">
+                    <a routerLink="/admin/users">Adim</a>
+                </div>
+           </div>
+        </div>
+
+        <div class="admin-menu">
+            <a href="#">OVERVIEW</a>
+            <a href="#">PUBLIC PLAYLISTS</a>
+            <a href="#">FOLLOWING(0)</a>
+        </div>
+        <div class="album-image">
+            <h2>Public Playlist</h2>
+                <img src="assets/icon/carly.jpg" alt="">
+            <p>Carly</p>
+            <a href="#">0 FOLLOWERS</a>
+        </div>
+   </div>
+  </section>

@@ -1,0 +1,12 @@
+<h1 class="tittle">Song</h1>
+
+<div class="form">
+  <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit($event)">
+    <input class="form--controls" type="text" formControlName="name" placeholder="name">
+    <input class="form--controls" type="text" formControlName="album" placeholder="album">
+    <input class="form--controls" type="text" formControlName="duration" placeholder="duration">
+    <input class="form--controls" type="text" formControlName="popularity" placeholder="popularity">
+    <input class="form--controls" type="text" formControlName="genre" placeholder="genre">
+    <button class="form--btn btn" type="submit">submit</button>
+  </form>
+</div>
