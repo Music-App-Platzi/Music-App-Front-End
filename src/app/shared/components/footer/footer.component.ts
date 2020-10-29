@@ -27,13 +27,27 @@ export class FooterComponent implements OnInit {
    }
 
   play(): void{
-    this.currentSong = new Audio ('https://s3-us-east-2.amazonaws.com/music-app-platzi-music/2.mp3');
+    this.currentSong = new Audio ('https://s3-us-east-2.amazonaws.com/music-app-platzi-music/4.mp3');
     this.currentSong.addEventListener('timeupdate', () => {
-      this.newTime = (this.currentSong.currentTime * (this.currentSong.duration /10))/100;
+        this.newTime = (this.currentSong.currentTime * (this.currentSong.duration /10))/ 48;
     });
     this.currentSong.play();
   }
   pause(): void{
     this.currentSong.pause();
+  }
+  parseTime(time= '01:00'): any{
+    if (time) {
+      const partTime = parseInt(time.toString().split('.')[0], 10);
+      let minutes = Math.floor(partTime/60).toString();
+      if (minutes.length === 1){
+        minutes = '0' + minutes;
+      }
+      let seconds = (partTime % 60).toString();
+      if (seconds.length === 1) {
+        seconds = '0' + seconds;
+      }
+      return minutes + ':' + seconds;
+    }
   }
 }
