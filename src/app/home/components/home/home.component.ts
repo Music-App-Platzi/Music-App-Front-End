@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MusicService } from './../../../core/music.service';
+import { SongsResponse } from './../../../models/music.model';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -15,53 +18,20 @@ export class HomeComponent implements OnInit {
 
   ];
 
-  imagesCarousel: string[] = [
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-  ];
+  songs: SongsResponse;
 
-  users = [
-    {
-      id: '1',
-      song: 'Dame Dame',
-      artist: 'Claydee feat',
-      thumbnail: '👍🏻',
-    },
-    {
-      id: '2',
-      song: 'Kamelia',
-      artist: 'DDY Numes',
-      thumbnail: '👍🏻',
-    },
-    {
-      id: '3',
-      song: 'Laught Till You Cry',
-      artist: 'Faydee',
-      thumbnail: '👍🏻',
-    },
-    {
-      id: '4',
-      song: 'I dont know',
-      artist: 'Deejay Fly',
-      thumbnail: '👍🏻',
-    }
-  ];
-
-  constructor() { }
+  constructor(
+    private musicService: MusicService,
+  ) { }
 
   ngOnInit(): void {
+    this.allSongs();
+  }
+  allSongs(): void{
+    this.musicService.allSongs()
+    .subscribe( songs => {
+      this.songs = songs;
+    });
   }
 
 }
