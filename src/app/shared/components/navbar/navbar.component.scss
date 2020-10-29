@@ -17,7 +17,7 @@
     &--menu-responsive {
       position: absolute;
       left: 100%;
-      top: 1em;
+      top: .5em;
       transition: transform 0.3s;
 
       .active & {
@@ -66,5 +66,42 @@
       width: var(--sizeIcon);
       margin-right: 1em;
     }
+  }
+}
+
+.search-songs {
+  display: flex;
+  align-items: center;
+  margin: 0 1.4em 1.5em;
+
+  @media (min-width: 701px) {
+    display: none;
+  }
+
+  &--input {
+    height: 30px;
+    width: 250px;
+    border-radius: 50px;
+    border: 1px solid var(--fiveColor);
+    outline: none;
+    padding-left: 10px;
+    background-color: var(--fiveColor);
+    color: white;
+
+    &:hover {
+      box-shadow: 0 1px 6px 0 var(--grayColor);
+      border-color: var(--tertiaryColor);
+    }
+  }
+
+  ::-webkit-input-placeholder {
+    color: var(--whiteColor);
+  }
+
+  &--image {
+    --sizeIcon: 1.8em;
+    height: var(--sizeIcon);
+    width: var(--sizeIcon);
+    margin-right: 1em;
   }
 }
