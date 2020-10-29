@@ -14,9 +14,9 @@
         <mat-icon (click)="play()">play_arrow</mat-icon>
         <mat-icon>skip_next</mat-icon>
         <div class="container__player--progressBar">
-        <p>0:00</p>
-        <mat-progress-bar mode="determinate" value="newTime"></mat-progress-bar>
-        <p>0:00</p>
+        <p>{{parseTime(currentSong?.currentTime) || "0:00"}}</p>
+        <mat-progress-bar mode="determinate" [value]="newTime"></mat-progress-bar>
+        <p>{{parseTime(currentSong?.duration) || "0:00"}}</p>
         </div>
     </div>
 </div>
