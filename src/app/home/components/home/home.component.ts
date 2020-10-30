@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { from } from 'rxjs';
 
 import { MusicService } from './../../../core/music.service';
 import { SongsResponse } from './../../../models/music.model';
@@ -9,6 +11,10 @@ import { SongsResponse } from './../../../models/music.model';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+  inputFilter = new FormControl('');
+
+  filterPost = '';
 
   images: string[] = [
     'assets/img__carrousel/soundMusic.jpg',
