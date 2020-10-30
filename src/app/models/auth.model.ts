@@ -17,8 +17,8 @@ export interface Register {
 }
 export interface RegisterResponse {
     user: {
-        id: number
-        rol_id: number,
+        id: number;
+        rol_id: number;
         username: boolean;
         name: string;
         mail: string;
