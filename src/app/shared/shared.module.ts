@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FilterPipe } from './pipes/filter/filter.pipe';
 import { MaterialModule } from './../material/material.module';
 
 
@@ -13,12 +14,14 @@ import { MaterialModule } from './../material/material.module';
   declarations: [
     NavbarComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FilterPipe
   ],
   exports: [
     NavbarComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,

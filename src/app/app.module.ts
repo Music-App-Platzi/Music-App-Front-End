@@ -12,13 +12,11 @@ import { AuthInterceptor } from './auth.interceptor';
 
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { LandingPageComponent } from './landing-page/components/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    LandingPageComponent
   ],
   imports: [
     BrowserModule,
