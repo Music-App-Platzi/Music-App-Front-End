@@ -23,7 +23,7 @@
   </div>
 </section>
 
-<input type="text" [formControl]="inputFilter">
+<input type="text" name="filterpost" [(ngModel)]="inputFilter">
 <!-- {{ inputFilter.value }} -->
 <div class="table--responsive">
   <h1>Top Tracks</h1>
@@ -37,8 +37,8 @@
       </tr>
     </thead>
     <tbody>
-      <!-- <tr *ngFor="let song of songs?.data | filter:filterPost"> -->
-      <tr *ngFor="let song of songs?.data">
+      <tr *ngFor="let song of songs?.data | filter:filterPost">
+      <!-- <tr *ngFor="let song of songs?.data"> -->
       <!-- <tr *ngFor="let song of songs?.data"> -->
         <td>{{song?.id}}</td>
         <td>{{song?.name}}</td>
