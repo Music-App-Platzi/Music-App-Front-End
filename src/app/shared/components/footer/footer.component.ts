@@ -27,7 +27,7 @@ export class FooterComponent implements OnInit {
    }
 
   play(): void{
-    this.currentSong = new Audio ('https://s3-us-east-2.amazonaws.com/music-app-platzi-music/4.mp3');
+    this.currentSong = new Audio ('https://s3-us-east-2.amazonaws.com/music-app-platzi-music/185.mp3');
     this.currentSong.addEventListener('timeupdate', () => {
         this.newTime = (this.currentSong.currentTime * (this.currentSong.duration /10))/ 48;
     });
