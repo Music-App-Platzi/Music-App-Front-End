@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 import { LoginResponse } from './../../../models/auth.model';
 
@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
 
   toShow: any;
   user: LoginResponse;
+  installEvent = null;
 
   constructor(
     private route: Router
@@ -30,6 +31,22 @@ export class HeaderComponent implements OnInit {
     sessionStorage.clear();
     this.user = null;
     this.route.navigate(['/home']);
+  }
+
+
+  @HostListener('window:beforeinstallprompt', ['$event'])
+  onBeforeInstallPrompt(event: Event) {
+    event.preventDefault();
+    this.installEvent = event;
+  }
+
+  installByUser(): void{
+    if (this.installEvent){
+      this.installEvent.prompt();
+      this.installEvent.userChoice
+      .then(() => {
+      });
+    }
   }
 
 }

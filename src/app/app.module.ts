@@ -13,6 +13,8 @@ import { AuthInterceptor } from './auth.interceptor';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { LandingPageComponent } from './landing-page/components/landing-page/landing-page.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { LandingPageComponent } from './landing-page/components/landing-page/lan
     BrowserAnimationsModule,
     HttpClientModule,
     NgxSpinnerModule,
-    SweetAlert2Module.forRoot()
+    SweetAlert2Module.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     {
