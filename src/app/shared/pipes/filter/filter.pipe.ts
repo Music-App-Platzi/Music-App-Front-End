@@ -6,9 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
 
   transform(value: any, arg: any): any {
+    if (arg === '') return value
     const resultSongs = [];
     for (const songs of value) {
-      if (songs.name.toLowerCase().indexOf(arg.toLowerCase()) > -1) {
+      if (songs.songs.toLowerCase().indexOf(arg.toLowerCase()) > -1) {
         resultSongs.push(songs);
       }
     }
