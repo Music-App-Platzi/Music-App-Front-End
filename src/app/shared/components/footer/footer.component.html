@@ -4,7 +4,7 @@
     <div class="container__footer">
         <img src="./../../../../assets/img__footer/Astronauta.png" alt="">
         <div class="container__footer--text">
-            <p>Titulo <br> Categoria</p>
+            <p> {{currentSong?.paused | json}} <br> Categoria</p>
         </div>
     </div>
     <div class="container__player">
@@ -15,10 +15,10 @@
             <img src="assets/icon/fast-backward-solid.svg" alt="">
         </div>           
         <div class="hover__player">
-            <img src="assets/icon/pause-solid.svg" (click)="pause()">
+            <img src="assets/icon/pause-solid.svg"  (click)="pause()" *ngIf="currentSong && !currentSong?.paused">
         </div>
         <div class="hover__player">    
-            <img src="assets/icon/play-solid.svg" (click)="play()">
+            <img src="assets/icon/play-solid.svg" (click)="play()" *ngIf="!currentSong || currentSong?.paused">
         </div>
         <div class="hover__player">    
             <img src="assets/icon/fast-forward-solid.svg" alt="">

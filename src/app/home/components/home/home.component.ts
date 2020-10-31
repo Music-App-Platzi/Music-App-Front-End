@@ -3,7 +3,9 @@ import { FormControl } from '@angular/forms';
 import { from } from 'rxjs';
 
 import { MusicService } from './../../../core/music.service';
-import { SongsResponse } from './../../../models/music.model';
+import { PlayService } from './../../../core/play.service';
+import { SongsResponse, SongResponse } from './../../../models/music.model';
+
 
 @Component({
   selector: 'app-home',
@@ -28,6 +30,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private musicService: MusicService,
+    private playService: PlayService
   ) { }
 
   ngOnInit(): void {
@@ -37,6 +40,13 @@ export class HomeComponent implements OnInit {
     this.musicService.allSongs()
     .subscribe( songs => {
       this.songs = songs;
+    });
+  }
+  playSong(songs: SongsResponse): void {
+    this.musicService.getSong(songs)
+    .subscribe (songs => {
+      console.log(songs);
+      this.playService.playSong(songs);
     });
   }
 
