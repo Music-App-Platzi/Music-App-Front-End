@@ -36,8 +36,10 @@
     text-align: center;
     padding: 2em 0px;
 
-    img {
+    svg {
       height: 4em;
+      width: 100%;
+      color: var(--fontColor);
     }
   }
 
