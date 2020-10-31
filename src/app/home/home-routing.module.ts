@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AlbumsComponent } from './components/albums/albums.component';
 import { ArtistsComponent } from './components/artists/artists.component';
+import { SongsComponent } from './components/songs/songs.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 const routes: Routes = [
   {
@@ -17,6 +19,14 @@ const routes: Routes = [
   {
     path: 'artist',
     component: ArtistsComponent
+  },
+  {
+    path: 'songs',
+    component: SongsComponent
+  },
+  {
+    path: 'favorites',
+    component: FavoritesComponent
   }
 ];
 

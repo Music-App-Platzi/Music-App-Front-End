@@ -1,14 +1,14 @@
 <div class="container-body">
-    <a routerLink="/home" class="return">regresar</a>
+    <a routerLink="/home" class="return">Back</a>
     <section class="from-register">
-        <h4>Iniciar Sesion</h4>
+        <h4>Log in</h4>
         <form [formGroup]="form">
-            <input class="from-register--controls"type="mail" formControlName="mail" placeholder="Ingresa tu Usuario o Correo">
-            <input class="from-register--controls" type="password" formControlName="password" placeholder="Ingresa tu contraseña">
-            <input type="checkbox" class="check-box"><span class="question-box">Recordar Contraseña</span>
+            <input class="from-register--controls"type="mail" formControlName="mail" placeholder="Mail">
+            <input class="from-register--controls" type="password" formControlName="password" placeholder="Password">
+            <input type="checkbox" class="check-box"><span class="question-box">Remember password</span>
         </form>
-        <input class="botons" type="submit" value="Entrar" (click)="login($event)">
-        <p><a href="#">¿Olvide mi Contrasña?</a></p>
+        <input class="botons" type="submit" value="Enter" (click)="login($event)">
+        <p><a href="#">I forgot my password?</a></p>
     </section>
 </div>
 <ngx-spinner color="white" type = "ball-scale-ripple-multiple">

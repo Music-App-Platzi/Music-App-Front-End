@@ -6,18 +6,24 @@ import { HomeComponent } from './components/home/home.component';
 import { SharedModule } from './../shared/shared.module';
 import { AlbumsComponent } from './components/albums/albums.component';
 import { ArtistsComponent } from './components/artists/artists.component';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SongsComponent } from './components/songs/songs.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     AlbumsComponent,
-    ArtistsComponent
+    ArtistsComponent,
+    SongsComponent,
+    FavoritesComponent,
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class HomeModule { }
