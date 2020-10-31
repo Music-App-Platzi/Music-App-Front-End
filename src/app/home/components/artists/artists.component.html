@@ -6,7 +6,7 @@
           <div class="id-artist-container">
             <div class="profile-artist">
               <figure>
-                <img src="assets/images/one-ok-rock.jpeg" alt="">
+                <img src="assets/images/one-ok-rock.jpeg" alt="Image Artists">
               </figure>
             </div>
             <div class="name-song">
@@ -70,21 +70,13 @@
        </section>
      
     </div>
+  
     <section class="carousel">
       <div class="carousel__container">
-        <div class="carousel-item">
-          <img class="carousel-item__img">
-          <div class="carousel-item__details">
-            <div>
-              <img src="./../../../../assets/img__carrousel/play-icon.png" alt="">
-              <img src="./../../../../assets/img__carrousel/plus-icon.png" alt="">
-            </div>
-            <p class="carousel-item__details--title">Artist</p>
-            <p class="carousel-item__details--subtitle">Album</p>
-          </div>
+        <div class="carousel-item" *ngFor="let imagesArtists of imagesArtist">
+          <img class="carousel-item__img" [src]="imagesArtists" alt="Image Carousel" />
         </div>
       </div>
-      <h3>Album Covers</h3>
     </section>
 
 </div>
