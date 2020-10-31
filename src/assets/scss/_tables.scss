@@ -1,4 +1,3 @@
-
 .table {
   &--responsive {
     overflow-x: auto;
@@ -8,7 +7,7 @@
 
   th,
   td {
-    padding: .5em;
+    padding: 0.5em;
     text-align: left;
     font-weight: 600;
   }
@@ -17,7 +16,16 @@
     color: var(--mainColor);
   }
 
-  tbody td {
-    color: var(--tertiaryColor);
+  tbody {
+    td {
+      color: var(--tertiaryColor);
+    }
+
+    tr {
+      &:hover {
+        background-color: var(--mainSecondColor);
+        cursor: pointer;
+      }
+    }
   }
 }
