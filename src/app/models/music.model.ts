@@ -24,3 +24,15 @@ export interface SongsResponse {
         genre: string;
     } [];
 }
+export interface SongResponse {
+    data: {
+        id: number;
+        album_id: number;
+        name: string;
+        duration: string;
+        song_link: string;
+        thumbnail: string;
+        popularity: number;
+        genre: string;
+    };
+}

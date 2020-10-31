@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { MusicService } from './../../../core/music.service';
 import { PlayService } from './../../../core/play.service';
-import { SongsResponse } from './../../../models/music.model';
+import { SongsResponse, SongResponse } from './../../../models/music.model';
 
 
 @Component({
@@ -37,10 +37,10 @@ export class HomeComponent implements OnInit {
     });
   }
   playSong(songs: SongsResponse): void {
-    this.playService.playSong(this.songs);
     this.musicService.getSong(songs)
     .subscribe (songs => {
       console.log(songs);
+      this.playService.playSong(songs);
     });
   }
 
