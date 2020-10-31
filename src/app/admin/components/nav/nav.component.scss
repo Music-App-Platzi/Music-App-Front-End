@@ -76,7 +76,7 @@
 .search-songs {
   display: flex;
   align-items: center;
-  margin: 0 1.4em 1.5em;
+  margin: 0 0.6em 1.5em;
 
   @media (min-width: 701px) {
     display: none;
@@ -105,7 +105,7 @@
   &--image {
     --sizeIcon: 1.8em;
     height: var(--sizeIcon);
-    width: var(--sizeIcon);
-    margin-right: 1em;
+    min-width: var(--sizeIcon);
+    margin-right: 0.2em;
   }
 }
