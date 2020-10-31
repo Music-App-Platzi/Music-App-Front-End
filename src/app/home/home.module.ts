@@ -6,18 +6,20 @@ import { HomeComponent } from './components/home/home.component';
 import { SharedModule } from './../shared/shared.module';
 import { AlbumsComponent } from './components/albums/albums.component';
 import { ArtistsComponent } from './components/artists/artists.component';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     HomeComponent,
     AlbumsComponent,
-    ArtistsComponent
+    ArtistsComponent,
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class HomeModule { }

@@ -27,7 +27,7 @@ const routes: Routes = [
       },
       {
         path: 'landing-page',
-        loadChildren: () => import ('./landing-page/page.module').then(m => m.PageModule)
+        loadChildren: () => import ('./landing-page/landing-page.module').then(m => m.LandingPageModule)
       },
   ]
   },

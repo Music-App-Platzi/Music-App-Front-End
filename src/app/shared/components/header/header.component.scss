@@ -3,7 +3,7 @@ header {
   width: 100%;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 11;
 
   nav {
     display: flex;
@@ -72,7 +72,7 @@ header {
   &--image {
     --sizeIcon: 1.8em;
     height: var(--sizeIcon);
-    width: var(--sizeIcon);
+    min-width: var(--sizeIcon);
     margin-right: 1em;
   }
 }
