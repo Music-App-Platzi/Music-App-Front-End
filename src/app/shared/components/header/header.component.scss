@@ -9,7 +9,13 @@ header {
     display: flex;
   }
 }
-
+.install__app{
+  color: var(--fontColor);
+  background-color: var(--navbar);
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+}
 .nav-right-section {
   height: auto;
   display: flex;
