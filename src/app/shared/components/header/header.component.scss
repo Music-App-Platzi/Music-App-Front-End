@@ -3,12 +3,19 @@ header {
   width: 100%;
   position: sticky;
   top: 0;
+  z-index: 11;
 
   nav {
     display: flex;
   }
 }
-
+.install__app{
+  color: var(--fontColor);
+  background-color: var(--navbar);
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+}
 .nav-right-section {
   height: auto;
   display: flex;
@@ -65,7 +72,7 @@ header {
   &--image {
     --sizeIcon: 1.8em;
     height: var(--sizeIcon);
-    width: var(--sizeIcon);
+    min-width: var(--sizeIcon);
     margin-right: 1em;
   }
 }

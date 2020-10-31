@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { from } from 'rxjs';
+
+import { MusicService } from './../../../core/music.service';
+import { PlayService } from './../../../core/play.service';
+import { SongsResponse, SongResponse } from './../../../models/music.model';
+
 
 @Component({
   selector: 'app-home',
@@ -6,6 +13,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+  inputFilter = new FormControl('');
+
+  filterSong = '';
 
   images: string[] = [
     'assets/img__carrousel/soundMusic.jpg',
@@ -15,53 +26,28 @@ export class HomeComponent implements OnInit {
 
   ];
 
-  imagesCarousel: string[] = [
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-  ];
+  songs: SongsResponse;
 
-  users = [
-    {
-      id: '1',
-      song: 'Dame Dame',
-      artist: 'Claydee feat',
-      thumbnail: '👍🏻',
-    },
-    {
-      id: '2',
-      song: 'Kamelia',
-      artist: 'DDY Numes',
-      thumbnail: '👍🏻',
-    },
-    {
-      id: '3',
-      song: 'Laught Till You Cry',
-      artist: 'Faydee',
-      thumbnail: '👍🏻',
-    },
-    {
-      id: '4',
-      song: 'I dont know',
-      artist: 'Deejay Fly',
-      thumbnail: '👍🏻',
-    }
-  ];
-
-  constructor() { }
+  constructor(
+    private musicService: MusicService,
+    private playService: PlayService
+  ) { }
 
   ngOnInit(): void {
+    this.allSongs();
+  }
+  allSongs(): void{
+    this.musicService.allSongs()
+    .subscribe( songs => {
+      this.songs = songs;
+    });
+  }
+  playSong(songs: SongsResponse): void {
+    this.musicService.getSong(songs)
+    .subscribe (songs => {
+      console.log(songs);
+      this.playService.playSong(songs);
+    });
   }
 
 }

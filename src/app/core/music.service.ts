@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { environment } from './../../environments/environment';
-import { ArtistsResponse, AlbumsResponse } from './../models/music.model';
+import { ArtistsResponse, AlbumsResponse, SongsResponse, SongResponse } from './../models/music.model';
 
 @Injectable({
   providedIn: 'root'
@@ -40,5 +40,13 @@ export class MusicService {
     }
     delateAlbum(id: AlbumsResponse): Observable<AlbumsResponse>{
       return this.http.delete<AlbumsResponse>(`${environment.api}albums/${id}`);
+    }
+
+    //SONGS
+    allSongs(): Observable<SongsResponse>{
+      return this.http.get<SongsResponse>(`${environment.api}songs`);
+    }
+    getSong(id: SongsResponse): Observable<SongResponse>{
+      return this.http.get<SongResponse>(`${environment.api}songs/${id}`);
     }
 }

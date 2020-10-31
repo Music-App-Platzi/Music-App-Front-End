@@ -12,12 +12,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let songs of songs; let i = index">
-        <td>{{songs.name}}</td>
-        <td>{{songs.album_id}}</td>
-        <td>{{songs.duration}}</td>
-        <td>{{songs.popularity}}</td>
-        <td>{{songs.genre}}</td>
+      <tr *ngFor="let songs of songs?.data">
+        <td>{{songs?.name}}</td>
+        <td>{{songs?.album_id}}</td>
+        <td>{{songs?.duration}}</td>
+        <td>{{songs?.popularity}}</td>
+        <td>{{songs?.genre}}</td>
         <td>
           <a class="btn table--btn" [routerLink]="['edit',songs.id]">
             Edit

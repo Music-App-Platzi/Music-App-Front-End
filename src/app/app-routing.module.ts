@@ -26,10 +26,14 @@ const routes: Routes = [
         loadChildren: () => import ('./profile/profile.module').then(m => m.ProfileModule)
       },
       {
-        path: '',
-        loadChildren: () => import ('./auth/auth.module').then(m => m.AuthModule)
-      }
+        path: 'landing-page',
+        loadChildren: () => import ('./landing-page/landing-page.module').then(m => m.LandingPageModule)
+      },
   ]
+  },
+  {
+    path: '',
+    loadChildren: () => import ('./auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: 'admin',

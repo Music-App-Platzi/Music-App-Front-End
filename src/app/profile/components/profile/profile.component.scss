@@ -80,7 +80,7 @@
     }
 
     .admin-button:hover{
-        background: var(--mainFristColor);
+        background: var(--mainFirstColor);
     }
     @media (max-width: 540px){
         padding: 15px 0;
@@ -113,7 +113,7 @@
 
 .admin-menu a:hover{
     color: var(--whiteColor);
-    border-bottom: 3px solid var(--mainFristColor);
+    border-bottom: 3px solid var(--mainFirstColor);
 }
 
 .album-image{
