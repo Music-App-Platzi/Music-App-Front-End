@@ -38,6 +38,7 @@
     <thead>
       <tr>
         <th>#</th>
+        <th></th>
         <th>Song</th>
         <th>Artist</th>
       </tr>
@@ -45,6 +46,7 @@
     <tbody>
       <tr *ngFor="let song of songs?.data | filter:filterSong">
         <td>{{song?.id}}</td>
+        <img class="hover__player" src="assets/icon/play-solid.svg" alt="" (click)="playSong(song?.id)">
         <td>{{song?.name}}</td>
         <td>{{song?.duration}}</td>
       </tr>
