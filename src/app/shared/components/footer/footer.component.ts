@@ -22,6 +22,7 @@ export class FooterComponent implements OnInit {
   ) {
     this.playService.song$.subscribe(song => {
       this.sonsg = song;
+      if (song){ this.play(); }
     });
   }
 
@@ -36,9 +37,7 @@ export class FooterComponent implements OnInit {
 
 
   play(): void{
-    console.log(this.sonsg.data);
     this.currentSong = new Audio (this.sonsg.data.song_link);
-    console.log(this.play);
     this.currentSong.addEventListener('timeupdate', () => {
         this.newTime = (this.currentSong.currentTime * (this.currentSong.duration /10))/ 48;
     });
