@@ -17,6 +17,9 @@
     <nav>
       <ul class="nav-right-section">
         <li>
+          <button class="install__app" (click)="installByUser()" *ngIf="installEvent">Instalar</button>
+        </li>
+        <li>
           <a href="" *ngIf="user?.rol_id">
             <img src="assets/icon/perfil-sin-fondo.png" alt="" *ngIf="user?.thumbnail == null">
             <img [src]="user?.thumbnail" *ngIf="user?.thumbnail !== null" alt="img-profile">
