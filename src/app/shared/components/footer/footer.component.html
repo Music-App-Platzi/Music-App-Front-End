@@ -8,11 +8,21 @@
         </div>
     </div>
     <div class="container__player">
-        <mat-icon>replay</mat-icon>
-        <mat-icon>skip_previous</mat-icon>
-        <mat-icon (click)="pause()" *ngIf="currentSong && !currentSong?.paused">pause_circle_outline</mat-icon>
-        <mat-icon (click)="play()" *ngIf="!currentSong || currentSong?.paused">play_circle_outline</mat-icon>
-        <mat-icon>skip_next</mat-icon>
+        <div class="hover__player">
+            <img src="assets/icon/undo-alt-solid.svg" alt="">
+        </div>
+        <div class="hover__player">
+            <img src="assets/icon/fast-backward-solid.svg" alt="">
+        </div>           
+        <div class="hover__player">
+            <img src="assets/icon/pause-solid.svg"  (click)="pause()" *ngIf="currentSong && !currentSong?.paused">
+        </div>
+        <div class="hover__player">    
+            <img src="assets/icon/play-solid.svg" (click)="play()" *ngIf="!currentSong || currentSong?.paused">
+        </div>
+        <div class="hover__player">    
+            <img src="assets/icon/fast-forward-solid.svg" alt="">
+        </div>
         <div class="container__player--progressBar">
         <p>{{parseTime(currentSong?.currentTime) || "0:00"}}</p>
         <mat-progress-bar mode="determinate" [value]="newTime"></mat-progress-bar>

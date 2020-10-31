@@ -1,26 +1,22 @@
 
 <div class="container-body">
-    <a routerLink="/home" class="return">regresar</a>
+    <a routerLink="/home" class="return">Back</a>
     <section class="from-register">
-        <h4>Formulario Registro</h4>
+        <h4>Registration Form</h4>
         <form [formGroup]="form">
-            <input class="from-register--controls" type="text" formControlName="name" placeholder="Ingresa tu Nombre">
-            <input class="from-register--controls" type="text" formControlName="username" placeholder="Ingresa tu Nombre de Usuario">
-            <input class="from-register--controls" type="email" formControlName="mail" placeholder="Ingresa tu correo">
-            <input class="from-register--controls" type="password" formControlName="password" placeholder="Ingresa tu contraseña">
-            <!-- <div>
-                <label for="photo">Enviar Foto</label>
-                <input class="register-file" type="file" formControlName="photo">
-            </div> -->
+            <input class="from-register--controls" type="text" formControlName="name" placeholder="Name">
+            <input class="from-register--controls" type="text" formControlName="username" placeholder="Username">
+            <input class="from-register--controls" type="email" formControlName="mail" placeholder="Mail">
+            <input class="from-register--controls" type="password" formControlName="password" placeholder="Password">
         </form>
-        <p>Estoy deacuerdo con <a>Terminos y condiciones</a></p>
-        <input class="botons" type="submit" value="Registrar" (click)="register($event)">
+        <p>I agree with the <a>terms and conditions</a></p>
+        <input class="botons" type="submit" value="Sign in" (click)="register($event)">
         <div class="login-button-container">
             <a  class="googlebuton" href="#">
-              <img src="../assets/icon/google-logo.png" alt="Google logo"><span>Registrate con Google</span>
+              <img src="../assets/icon/google-logo.png" alt="Google logo"><span>Sign up with google</span>
             </a>
         </div>
-        <p><a routerLink="/login">¿Ya tengo cuenta?</a></p>
+        <p><a routerLink="/login">Do I already have an account?</a></p>
     </section>
 </div>
 
