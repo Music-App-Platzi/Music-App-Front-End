@@ -14,10 +14,10 @@
         <div class="hover__player">
             <img src="assets/icon/fast-backward-solid.svg" alt="">
         </div>           
-        <div class="hover__player">
+        <div class="hover__player-pause">
             <img src="assets/icon/pause-solid.svg"  (click)="pause()" *ngIf="currentSong && !currentSong?.paused">
         </div>
-        <div class="hover__player">    
+        <div class="hover__player-play">    
             <img src="assets/icon/play-solid.svg" (click)="play()" *ngIf="!currentSong || currentSong?.paused">
         </div>
         <div class="hover__player">    

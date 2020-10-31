@@ -44,6 +44,17 @@
     justify-content: center;
     align-items: center;
   }
+  .hover__player-pause{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hover__player-play{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   img{
     width: 19px;
@@ -54,6 +65,21 @@
   }
 }
 
+// .hover__player-pause:hover{
+//   background: rgb(96, 126, 176, 0.7);
+//   width: 40px;
+//   height: 35px;
+//   border-radius: 50%;
+//   box-shadow: -1px 0px 25px 0px rgba(96, 126, 176, 0.75);
+// }
+
+.hover__player-play:hover{
+  background: rgb(96, 126, 176, 0.7);
+  width: 40px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: -1px 0px 25px 0px rgba(96, 126, 176, 0.75);
+}
 
 .hover__player:hover{
   background: rgb(96, 126, 176, 0.7);
