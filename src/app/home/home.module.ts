@@ -7,12 +7,14 @@ import { SharedModule } from './../shared/shared.module';
 import { AlbumsComponent } from './components/albums/albums.component';
 import { ArtistsComponent } from './components/artists/artists.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SongsComponent } from './components/songs/songs.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     AlbumsComponent,
     ArtistsComponent,
+    SongsComponent,
   ],
   imports: [
     CommonModule,

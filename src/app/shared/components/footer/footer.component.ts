@@ -22,7 +22,7 @@ export class FooterComponent implements OnInit {
   ) {
     this.playService.song$.subscribe(song => {
       this.sonsg = song;
-      if (song){ this.play(); }
+      // if (song){ this.play(); }
     });
   }
 

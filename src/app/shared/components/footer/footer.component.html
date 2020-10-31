@@ -5,7 +5,7 @@
         <img src="./../../../../assets/img__footer/Astronauta.png" *ngIf="!sonsg?.data.thumbnail" alt="">
         <img [src]="sonsg?.data.thumbnail" *ngIf="sonsg?.data.thumbnail" alt="">
         <div class="container__footer--text">
-            <p> {{sonsg?.data.name || "Titulo"}} <br> {{sonsg?.data.genre || "categoria"}}</p>
+            <p> {{sonsg?.data.name || "Titulo"}}</p>
         </div>
     </div>
     <div class="container__player">
