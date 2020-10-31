@@ -8,6 +8,7 @@ import { AlbumsComponent } from './components/albums/albums.component';
 import { ArtistsComponent } from './components/artists/artists.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SongsComponent } from './components/songs/songs.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SongsComponent } from './components/songs/songs.component';
     AlbumsComponent,
     ArtistsComponent,
     SongsComponent,
+    FavoritesComponent,
   ],
   imports: [
     CommonModule,
