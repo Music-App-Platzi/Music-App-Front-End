@@ -25,6 +25,10 @@ const routes: Routes = [
         canActivate: [UserGuard],
         loadChildren: () => import ('./profile/profile.module').then(m => m.ProfileModule)
       },
+      {
+        path: 'landing-page',
+        loadChildren: () => import ('./landing-page/landing-page.module').then(m => m.LandingPageModule)
+      },
   ]
   },
   {
