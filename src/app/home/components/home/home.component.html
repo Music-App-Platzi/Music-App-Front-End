@@ -13,7 +13,7 @@
       <img class="carousel-item__img" [src]="song?.thumbnail" alt="">
       <div class="carousel-item__details">
         <div>
-          <img src="./../../../../assets/img__carrousel/play-icon.png" alt="">
+          <img src="./../../../../assets/img__carrousel/play-icon.png" alt="" (click)="playSong(song?.id)">
           <img src="./../../../../assets/img__carrousel/plus-icon.png" alt="">
         </div>
         <p class="carousel-item__details--title">{{song?.name}}</p>
