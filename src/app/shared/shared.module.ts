@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FilterPipe } from './pipes/filter/filter.pipe';
 import { MaterialModule } from './../material/material.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -26,7 +27,8 @@ import { MaterialModule } from './../material/material.module';
   imports: [
     CommonModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ]
 })
 export class SharedModule { }
