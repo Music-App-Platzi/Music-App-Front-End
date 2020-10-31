@@ -44,8 +44,7 @@ export class HomeComponent implements OnInit {
   }
   playSong(songs: SongsResponse): void {
     this.musicService.getSong(songs)
-    .subscribe (songs => {
-      console.log(songs);
+    .subscribe ( songs => {
       this.playService.playSong(songs);
     });
   }
