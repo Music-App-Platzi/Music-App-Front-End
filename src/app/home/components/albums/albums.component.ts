@@ -8,20 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class AlbumsComponent implements OnInit {
 
   imagesAlbums: string[] = [
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
-    'assets/img__carrousel/image_carousel.jpg',
+    'assets/img__carrousel/kamelia.jpg',
+    'assets/img__carrousel/faydee.jpg',
+    'assets/img__carrousel/carly.jpg',
+    'assets/img__carrousel/jonasBrothers.jpg',
+    'assets/img__carrousel/bilionera.jpg',
+    'assets/img__carrousel/edSheeran.jpg',
+    'assets/img__carrousel/lilNas.jpg',
+    'assets/img__carrousel/drake.jpg',
+    'assets/img__carrousel/faydeedj.jpg',
+    'assets/img__carrousel/carly.jpg',
+    'assets/img__carrousel/faydee.jpg',
   ];
 
   users = [

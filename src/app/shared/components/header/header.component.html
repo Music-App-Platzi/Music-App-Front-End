@@ -3,7 +3,7 @@
   <div class="container-nav">
 
     <!-- SEARCH SONGS -->
-    <div class="search-songs">
+    <!-- <div class="search-songs">
       <svg class="search-songs--image" width="20" height="22" viewBox="0 0 20 22" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd"
@@ -11,11 +11,14 @@
           fill="currentColor" />
       </svg>
       <input type="text" class="search-songs--input" placeholder="Search your entertainment" />
-    </div>
+    </div> -->
 
     <!-- MENU -->
     <nav>
       <ul class="nav-right-section">
+        <li>
+          <button class="install__app" (click)="installByUser()" *ngIf="installEvent">Instalar</button>
+        </li>
         <li>
           <a href="" *ngIf="user?.rol_id">
             <img src="assets/icon/perfil-sin-fondo.png" alt="" *ngIf="user?.thumbnail == null">

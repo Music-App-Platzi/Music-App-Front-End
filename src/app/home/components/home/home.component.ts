@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   inputFilter = new FormControl('');
 
-  filterPost = '';
+  filterSong = '';
 
   images: string[] = [
     'assets/img__carrousel/soundMusic.jpg',
