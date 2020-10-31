@@ -190,3 +190,40 @@
     }
   }
 }
+
+.filter-songs {
+  display: flex;
+  align-items: center;
+  margin: 2em 1em 0;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+
+  &--input {
+    height: 30px;
+    width: 250px;
+    border-radius: 50px;
+    border: 1px solid var(--fourthColor);
+    outline: none;
+    padding-left: 10px;
+    background-color: var(--fourthColor);
+    color: white;
+
+    &:hover {
+      box-shadow: 0 1px 6px 0 var(--grayColor);
+      border-color: var(--tertiaryColor);
+    }
+  }
+
+  ::-webkit-input-placeholder {
+    color: var(--whiteColor);
+  }
+
+  &--image {
+    --sizeIcon: 1.8em;
+    height: var(--sizeIcon);
+    min-width: var(--sizeIcon);
+    margin-right: 1em;
+  }
+}
