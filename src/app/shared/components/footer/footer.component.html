@@ -2,9 +2,10 @@
 
 <div class="container">
     <div class="container__footer">
-        <img src="./../../../../assets/img__footer/Astronauta.png" alt="">
+        <img src="./../../../../assets/img__footer/Astronauta.png" *ngIf="!sonsg?.data.thumbnail" alt="">
+        <img [src]="sonsg?.data.thumbnail" *ngIf="sonsg?.data.thumbnail" alt="">
         <div class="container__footer--text">
-            <p> {{currentSong?.paused | json}} <br> Categoria</p>
+            <p> {{sonsg?.data.name || "Titulo"}}</p>
         </div>
     </div>
     <div class="container__player">
