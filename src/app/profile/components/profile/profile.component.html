@@ -3,7 +3,7 @@
    <div class="sub-container">
         <div class="profile-image">
             <figure>
-                <img src="assets/icon/perfil-sin-fondo.png" alt="" *ngIf="user.thumbnail == null">
+                <img src="assets/icon/perfil-sin-fondo.png" alt="image-dumie" *ngIf="user.thumbnail == null">
                 <img [src]="user?.thumbnail" *ngIf="user.thumbnail !== null" alt="img-profile">
             </figure>
            <div class="user-name">
@@ -22,7 +22,7 @@
         </div>
         <div class="album-image">
             <h2>Public Playlist</h2>
-                <img src="assets/icon/carly.jpg" alt="">
+                <img src="assets/icon/carly.jpg" alt="image-album">
             <p>Carly</p>
             <a href="#">0 FOLLOWERS</a>
         </div>
