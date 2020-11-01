@@ -1,1 +1,47 @@
-<p>songs works!</p>
+<div class="main--albums">
+  <section class="carousel">
+    <h1 class="carousel--h1">Featured Tracks</h1>
+    <div class="carousel__container">
+      <div class="carousel-item" *ngFor="let imagesAlbum of imagesAlbums">
+        <img class="carousel-item__img" [src]="imagesAlbum" alt="Image Albums" />
+        <div class="carousel-item__details">
+          <div>
+            <img src="./../../../../assets/img__carrousel/play-icon.png" alt="Image Play" />
+            <img src="./../../../../assets/img__carrousel/plus-icon.png" alt="Image Plus" />
+          </div>
+          <p class="carousel-item__details--title">Song</p>
+          <p class="carousel-item__details--subtitle">Album</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="album__container">
+    <div class="album--image">
+      <img src="./../../../../assets/images/album.jpg" alt="Image Albums" />
+    </div>
+
+    <div class="table--responsive">
+      <div class="table--data">
+        <h1 class="albums--h1">Around The World</h1>
+        <h5 class="albums--h3">Akcent Feat.Lidia Buble & DDY Nunes</h5>
+        <p>
+            The artists we represent are one of the most successful in Romania and also were a
+            huge breakthrough in the international market, topping radio and sales around the
+            world.
+        </p>
+      </div>
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let user of users; let i = index">
+            <td>{{ user.id }}</td>
+            <td>{{ user.thumbnail }}</td>
+            <td>{{ user.song }}</td>
+            <td>{{ user.views }}</td>
+            <td>{{ user.time_song }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
