@@ -3,7 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { environment } from './../../environments/environment';
-import { ArtistsResponse, AlbumsResponse, SongsResponse, SongResponse } from './../models/music.model';
+import {
+  ArtistsResponse,
+  AlbumsResponse,
+  SongsResponse,
+  SongResponse,
+  LikeSong
+} from './../models/music.model';
 
 @Injectable({
   providedIn: 'root'
@@ -48,5 +54,10 @@ export class MusicService {
     }
     getSong(id: SongsResponse): Observable<SongResponse>{
       return this.http.get<SongResponse>(`${environment.api}songs/${id}`);
+    }
+    //Sonds Heards
+    likeSong(id): Observable<LikeSong>{
+      const data = id;
+      return this.http.post<LikeSong>(`${environment.api}songs-heards`, data);
     }
 }

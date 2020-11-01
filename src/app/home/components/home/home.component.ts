@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
     'assets/img__carrousel/listenNow.jpg',
 
   ];
-
+  user;
   songs: SongsResponse;
 
   constructor(
@@ -35,6 +35,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.allSongs();
+    let userData: any = sessionStorage.getItem('user');
+    userData = JSON.parse(userData);
+    if (userData){
+      this.user = userData.user;
+    }
   }
   allSongs(): void{
     this.musicService.allSongs()
@@ -45,7 +50,6 @@ export class HomeComponent implements OnInit {
   playSong(songs: SongsResponse): void {
     this.musicService.getSong(songs)
     .subscribe (songs => {
-      console.log(songs);
       this.playService.playSong(songs);
     });
   }
