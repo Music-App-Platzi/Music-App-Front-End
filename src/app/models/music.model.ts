@@ -36,3 +36,6 @@ export interface SongResponse {
         genre: string;
     };
 }
+export interface LikeSong {
+    id: number;
+}
