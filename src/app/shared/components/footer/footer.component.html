@@ -10,19 +10,19 @@
     </div>
     <div class="container__player">
         <div class="hover__player">
-            <img src="assets/icon/undo-alt-solid.svg" alt="">
+            <img src="assets/icon/undo-alt-solid.svg" alt="image-recharge">
         </div>
         <div class="hover__player">
-            <img src="assets/icon/fast-backward-solid.svg" alt="">
+            <img src="assets/icon/fast-backward-solid.svg" alt="image-backward">
         </div>           
-        <div class="hover__player">
-            <img src="assets/icon/pause-solid.svg"  (click)="pause()" *ngIf="currentSong && !currentSong?.paused">
+        <div class="hover__player-pause">
+            <img src="assets/icon/pause-solid.svg" alt="image-puse" (click)="pause()" *ngIf="currentSong && !currentSong?.paused">
+        </div>
+        <div class="hover__player-play">    
+            <img src="assets/icon/play-solid.svg" alt="image-play" (click)="play()" *ngIf="!currentSong || currentSong?.paused">
         </div>
         <div class="hover__player">    
-            <img src="assets/icon/play-solid.svg" (click)="play()" *ngIf="!currentSong || currentSong?.paused">
-        </div>
-        <div class="hover__player">    
-            <img src="assets/icon/fast-forward-solid.svg" alt="">
+            <img src="assets/icon/fast-forward-solid.svg" alt="imge-forward">
         </div>
         <div class="container__player--progressBar">
         <p>{{parseTime(currentSong?.currentTime) || "0:00"}}</p>
