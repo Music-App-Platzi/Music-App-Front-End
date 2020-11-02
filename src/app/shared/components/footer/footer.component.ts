@@ -22,35 +22,34 @@ export class FooterComponent implements OnInit {
   ) {
     this.playService.song$.subscribe(song => {
       this.sonsg = song;
-      // if (song){ this.play(); }
     });
   }
 
   ngOnInit(): void {
   }
-   song(): void{
-     this.musicService.allSongs()
-     .subscribe( songs => {
-       this.songs = songs;
-     });
-   }
+  song(): void {
+    this.musicService.allSongs()
+      .subscribe(songs => {
+        this.songs = songs;
+      });
+  }
 
 
-  play(): void{
-    this.currentSong = new Audio (this.sonsg.data.song_link);
+  play(): void {
+    this.currentSong = new Audio(this.sonsg.data.song_link);
     this.currentSong.addEventListener('timeupdate', () => {
-        this.newTime = (this.currentSong.currentTime * (this.currentSong.duration /10))/ 48;
+      this.newTime = (this.currentSong.currentTime * (this.currentSong.duration / 10)) / 48;
     });
     this.currentSong.play();
   }
-  pause(): void{
+  pause(): void {
     this.currentSong.pause();
   }
-  parseTime(time= '01:00'): any{
+  parseTime(time = '01:00'): any {
     if (time) {
       const partTime = parseInt(time.toString().split('.')[0], 10);
-      let minutes = Math.floor(partTime/60).toString();
-      if (minutes.length === 1){
+      let minutes = Math.floor(partTime / 60).toString();
+      if (minutes.length === 1) {
         minutes = '0' + minutes;
       }
       let seconds = (partTime % 60).toString();
