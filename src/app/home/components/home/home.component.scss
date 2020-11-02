@@ -59,47 +59,6 @@
   }
 }
 
-// PLAY LIST
-
-.table {
-  border-spacing: 0;
-
-  &--responsive {
-    padding: 0.4em;
-  }
-
-  tbody {
-    tr {
-      transition-duration: 0.3s;
-      &:hover {
-        box-shadow: 0 0 0.5em 0px #a7a7a7;
-        border-radius: 0.5em;
-      }
-
-      td {
-        &:first-child {
-          border-radius: 0.5em 0 0 0.5em;
-        }
-        &:last-child {
-          border-radius: 0 0.5em 0.5em 0;
-        }
-      }
-    }
-  }
-
-  &--btn {
-    padding: 0.5em 2em;
-
-    &:not(:last-child) {
-      margin-right: 0.5em;
-    }
-
-    &:hover {
-      background-color: var(--backgroundColor);
-    }
-  }
-}
-
 .filter-songs {
   display: flex;
   align-items: center;
