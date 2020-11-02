@@ -1,4 +1,3 @@
-
 <div class="container-body">
     <a routerLink="/home" class="return">Back</a>
     <section class="from-register">
@@ -8,19 +7,14 @@
             <input class="from-register--controls" type="text" formControlName="username" placeholder="Username">
             <input class="from-register--controls" type="email" formControlName="mail" placeholder="Mail">
             <input class="from-register--controls" type="password" formControlName="password" placeholder="Password">
+            <p>The password must have a minimum of 8 characters 1 uppercase letter and 1 numeric</p>
         </form>
-        <p>I agree with the <a>terms and conditions</a></p>
         <input class="botons" type="submit" value="Sign in" (click)="register($event)">
-        <div class="login-button-container">
-            <a  class="googlebuton" href="#">
-              <img src="../assets/icon/google-logo.png" alt="Google logo"><span>Sign up with google</span>
-            </a>
-        </div>
-        <p><a routerLink="/login">Do I already have an account?</a></p>
+        <p><a routerLink="/auth/login">Do I already have an account?</a></p>
     </section>
 </div>
 
-<ngx-spinner color="white" type = "ball-scale-ripple-multiple">
+<ngx-spinner color="#607EB0" type = "ball-scale-ripple-multiple">
   <p style="font-size: 20px; color: white">Loading...</p>
 </ngx-spinner>
 <swal
