@@ -17,7 +17,7 @@
 
     }
   }
-  
+
   @media (max-width: 1000px) {
       flex-direction: column;
       align-items: center;
@@ -26,54 +26,8 @@
 
 .album--image {
   padding: 40px;
-  
+
   @media (max-width: 1000px) {
     padding: 8px;
-  }
-}
-
-// PLAY LIST ALBUMS
-
-.table {
-  border-spacing: 0;
-
-  &--responsive {
-    padding: 4.9em;
-  
-    @media (max-width: 1000px) {
-      padding: 8px 16px;
-
-    }
-  }
-
-  tbody {
-    tr {
-      transition-duration: 0.3s;
-      &:hover {
-        box-shadow: 0 0 0.5em 0px #a7a7a7;
-        border-radius: 0.5em;
-      }
-
-      td {
-        &:first-child {
-          border-radius: 0.5em 0 0 0.5em;
-        }
-        &:last-child {
-          border-radius: 0 0.5em 0.5em 0;
-        }
-      }
-    }
-  }
-
-  &--btn {
-    padding: 0.5em 2em;
-
-    &:not(:last-child) {
-      margin-right: 0.5em;
-    }
-
-    &:hover {
-      background-color: var(--backgroundColor);
-    }
   }
 }
