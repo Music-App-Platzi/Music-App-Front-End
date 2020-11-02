@@ -10,15 +10,17 @@ import { Router } from '@angular/router';
 export class AdminGuard implements CanActivate {
   constructor(
     private router: Router
-  ){}
+  ) { }
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      const rol_id: any = sessionStorage.getItem('user');
-      if ( rol_id === 1){
-        return true;
-      }else {
-        this.router.navigate(['/login']);
-      }
+    const user: any = JSON.parse(sessionStorage.getItem('user'));
+    const rolId = user.user.rol_id;
+    if (rolId === 1) {
+      return true;
+    } else {
+      this.router.navigate(['/home']);
+      return false;
+    }
   }
 }
