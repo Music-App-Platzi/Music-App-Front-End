@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { AuthService } from './../../../core/auth.service';
+import { ValidatorsPassword } from './../../../utils/validator.password';
 
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 
@@ -34,7 +35,7 @@ export class RegisterComponent implements OnInit {
     if (this.form.valid){
       const formRegister = this.form.value;
       this.authService.createUser(formRegister)
-      .subscribe( user => {
+      .subscribe( () => {
         this.succesfulLRegisterSwal.fire();
       }, () => {
         this.errorRegisterSwal.fire();
@@ -47,13 +48,13 @@ export class RegisterComponent implements OnInit {
     this.form = this.formBuilder.group({
       name: ['', [Validators.required]],
       username: ['', [Validators.required]],
-      mail: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
+      mail: ['', [Validators.required, Validators.email, Validators.pattern(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/)]],
+      password: ['', [Validators.required, , ValidatorsPassword.isPasswordValid]],
       photo: ['', ],
     });
   }
   goToLogin(): void{
-    this.router.navigate(['auth/login']);
+    this.router.navigate(['/home']);
   }
 
 }
