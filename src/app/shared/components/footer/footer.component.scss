@@ -35,18 +35,29 @@
   align-items: center;
   padding: 15px;
 
-  .hover__player{
+  .hover__player {
     width: 40px;
     height: 35px;
     margin: 0px 5px;
     border-radius: 50%;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hover__player-pause {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  img{
+  .hover__player-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
     width: 19px;
     height: 19px;
     margin: 0 5px;
@@ -55,8 +66,15 @@
   }
 }
 
+.hover__player-play:hover {
+  background: rgb(96, 126, 176, 0.7);
+  width: 40px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: -1px 0px 25px 0px rgba(96, 126, 176, 0.75);
+}
 
-.hover__player:hover{
+.hover__player:hover {
   background: rgb(96, 126, 176, 0.7);
   width: 40px;
   height: 35px;
@@ -96,7 +114,7 @@
   .container__footer {
     display: none;
   }
-  .container__player img{
+  .container__player img {
     width: 15px;
     height: 15px;
     margin: 0;

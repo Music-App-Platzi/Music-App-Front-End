@@ -3,7 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { environment } from './../../environments/environment';
-import { ArtistsResponse, AlbumsResponse, SongsResponse, SongResponse } from './../models/music.model';
+import {
+  ArtistsResponse,
+  AlbumsResponse,
+  SongsResponse,
+  SongResponse,
+} from './../models/music.model';
 
 @Injectable({
   providedIn: 'root'

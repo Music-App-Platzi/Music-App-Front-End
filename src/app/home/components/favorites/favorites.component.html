@@ -1,0 +1,50 @@
+<div class="main--albums">
+    <section class="carousel">
+      <h1 class="carousel--h1">Favorites</h1>
+      <div class="carousel__container">
+        <div class="carousel-item" *ngFor="let imagesFavorite of imagesFavorites">
+          <img class="carousel-item__img" [src]="imagesFavorite" alt="Image Albums" />
+          <div class="carousel-item__details">
+            <div>
+              <img src="./../../../../assets/img__carrousel/play-icon.png" alt="Image Play" />
+              <img src="./../../../../assets/img__carrousel/plus-icon.png" alt="Image Plus" />
+            </div>
+            <p class="carousel-item__details--title">Song</p>
+            <p class="carousel-item__details--subtitle">Album</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="album__container">  
+
+      <div class="table--responsive"> 
+        <div class="table--data">
+          <h1 class="albums--h1">Favorites List</h1>
+        </div> 
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th></th>
+              <th>Song</th>
+              <th>Artist</th>
+              <th>Views</th>
+              <th>Time</th>
+            </tr>
+          </thead>  
+          <tbody>
+            <tr *ngFor="let user of users; let i = index">
+              <td>{{ user.id }}</td>
+              <td>{{ user.thumbnail }}</td>
+              <td>{{ user.song }}</td>
+              <td>{{ user.artist }}</td>
+              <td>{{ user.views }}</td>
+              <td>{{ user.time_song }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+</div>
+

@@ -1,7 +1,7 @@
 <div class="slider">
   <ul>
     <li *ngFor="let img of images">
-      <img [src]="img" alt="Imagen del Banner">
+      <img [src]="img" alt="Image Banner">
     </li>
   </ul>
 </div>
@@ -10,11 +10,11 @@
 <section class="carousel">
   <div class="carousel__container">
     <div class="carousel-item" *ngFor="let song of songs?.data">
-      <img class="carousel-item__img" [src]="song?.thumbnail" alt="">
+      <img class="carousel-item__img" [src]="song?.thumbnail" alt="Image Carousel">
       <div class="carousel-item__details">
         <div>
           <img src="./../../../../assets/img__carrousel/play-icon.png" alt="" (click)="playSong(song?.id)">
-          <img src="./../../../../assets/img__carrousel/plus-icon.png" alt="">
+          <img src="./../../../../assets/img__carrousel/plus-icon.png" alt="Image plus">
         </div>
         <p class="carousel-item__details--title">{{song?.name}}</p>
         <p class="carousel-item__details--subtitle">{{song?.genre}}</p>
@@ -40,16 +40,19 @@
         <th>#</th>
         <th></th>
         <th>Song</th>
-        <th>Artist</th>
+        <th>Time</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let song of songs?.data | filter:filterSong">
         <td>{{song?.id}}</td>
-        <img class="hover__player" src="assets/icon/play-solid.svg" alt="" (click)="playSong(song?.id)">
+        <img class="hover__player" src="assets/icon/play-solid.svg" alt="button_play" (click)="playSong(song?.id)">
         <td>{{song?.name}}</td>
         <td>{{song?.duration}}</td>
       </tr>
     </tbody>
   </table>
 </div>
+<ngx-spinner color="#607EB0" type = "ball-scale-ripple-multiple">
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
