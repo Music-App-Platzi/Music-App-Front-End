@@ -1,8 +1,17 @@
 .table {
   border-spacing: 0;
+  width: 100%;
 
   &--responsive {
     padding: 0.4em;
+    overflow-x: auto;
+  }
+
+  th,
+  td {
+    padding: 0.5em;
+    text-align: left;
+    font-weight: 600;
   }
 
   tbody {
@@ -20,6 +29,23 @@
         &:last-child {
           border-radius: 0 0.5em 0.5em 0;
         }
+      }
+    }
+  }
+
+  thead th {
+    color: var(--mainColor);
+  }
+
+  tbody {
+    td {
+      color: var(--fontColor);
+    }
+
+    tr {
+      &:hover {
+        background-color: var(--mainSecondColor);
+        cursor: pointer;
       }
     }
   }
