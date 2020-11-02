@@ -8,7 +8,6 @@ import {
   AlbumsResponse,
   SongsResponse,
   SongResponse,
-  LikeSong
 } from './../models/music.model';
 
 @Injectable({
@@ -54,10 +53,5 @@ export class MusicService {
     }
     getSong(id: SongsResponse): Observable<SongResponse>{
       return this.http.get<SongResponse>(`${environment.api}songs/${id}`);
-    }
-    //Sonds Heards
-    likeSong(id): Observable<LikeSong>{
-      const data = id;
-      return this.http.post<LikeSong>(`${environment.api}songs-heards`, data);
     }
 }

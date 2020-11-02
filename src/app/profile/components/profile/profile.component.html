@@ -1,17 +1,23 @@
 <section class="container">
-   <div class="sub-container">
-        <div class="profile-image">
-            <figure>
-                <img src="assets/icon/perfil-sin-fondo.png" alt="image-dumie" *ngIf="user.thumbnail == null">
-                <img [src]="user?.thumbnail" *ngIf="user.thumbnail !== null" alt="img-profile">
-            </figure>
-           <div class="user-name">
-            <p>user</p>
-            <h1>{{user?.username}}</h1>
-                <div class="admin-button">
-                    <a routerLink="/admin/users">Adim</a>
-                </div>
-           </div>
+  <div class="sub-container">
+    <div class="profile-image">
+      <figure>
+        <img
+          src="assets/icon/perfil-sin-fondo.png"
+          alt=""
+          *ngIf="user.thumbnail == null"
+        />
+        <img
+          [src]="user?.thumbnail"
+          *ngIf="user.thumbnail !== null"
+          alt="img-profile"
+        />
+      </figure>
+      <div class="user-name">
+        <p>User</p>
+        <h1>{{ user?.username }}</h1>
+        <div class="admin-button">
+          <a routerLink="/admin/users">Admi</a>
         </div>
       </div>
     </div>
@@ -34,12 +40,13 @@
           <p>Music Carly</p>
           <a href="#">0 FOLLOWERS</a>
         </div>
-        <div class="album-image">
-            <h2>Public Playlist</h2>
-                <img src="assets/icon/carly.jpg" alt="image-album">
-            <p>Carly</p>
-            <a href="#">0 FOLLOWERS</a>
       </div>
+
+      <div class="album-image--container">
+        <img src="assets/img__carrousel/lilNas.jpg" alt="Image Album" />
+        <div class="album-image--details">
+          <p>Music lilNas</p>
+          <a href="#">0 FOLLOWERS</a>
         </div>
       </div>
 
