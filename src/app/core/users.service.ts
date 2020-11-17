@@ -19,6 +19,8 @@ export class UsersService {
   allUsers(): Observable<UserResponse>{
     return this.http.get<UserResponse>(`${environment.api}users`);
   }
+  // TODO:
+  // Id is no typed
   getUser(id): Observable<UserResponse>{
     return this.http.get<UserResponse>(`${environment.api}users/${id}`);
   }

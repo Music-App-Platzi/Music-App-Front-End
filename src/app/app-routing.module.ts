@@ -8,6 +8,8 @@ import { AdminGuard } from './utils/admin.guard';
 
 const routes: Routes = [
   {
+    // TODO:
+    // The same path in two routes
     path: '',
     component: LayoutComponent,
     children: [
@@ -31,6 +33,8 @@ const routes: Routes = [
       },
   ]
   },
+  // TODO:
+  // The same path in two routes
   {
     path: '',
     loadChildren: () => import ('./auth/auth.module').then(m => m.AuthModule)
