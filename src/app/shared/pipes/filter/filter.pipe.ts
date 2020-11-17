@@ -5,6 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
+  // TODO:
+  // What type is song?
   transform(value: any, arg: any): any {
     if (arg === '') return value
     const resultSongs = [];

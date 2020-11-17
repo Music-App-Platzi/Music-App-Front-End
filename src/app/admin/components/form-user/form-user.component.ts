@@ -14,12 +14,18 @@ export class FormUserComponent implements OnInit {
   id: any;
 
   addressForm = this.fb.group({
+    // TODO:
+    // Compose is not necessary
     username: [null, Validators.compose([
       Validators.required, Validators.maxLength(100)])
     ],
+    // TODO:
+    // Compose is not necessary
     name: [null, Validators.compose([
       Validators.required, Validators.maxLength(100)])
     ],
+    // TODO:
+    // Compose is not necessary
     mail: [null, Validators.compose([
       Validators.required,
       Validators.maxLength(100),

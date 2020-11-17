@@ -27,6 +27,8 @@ export class FormArtistComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    // TODO:
+    // You should avoid double subscribe
     this.activeRoute.params.subscribe((params: Params) => {
       this.id = params.id;
       this.musicService.getArtist(this.id)

@@ -23,6 +23,8 @@ export class MusicService {
     allArtists(): Observable<ArtistsResponse>{
       return this.http.get<ArtistsResponse>(`${environment.api}artists`);
     }
+    // TODO:
+    // Id is no typed
     getArtist(id): Observable<ArtistsResponse>{
       return this.http.get<ArtistsResponse>(`${environment.api}artists/${id}`);
     }
@@ -37,6 +39,8 @@ export class MusicService {
     allAlbums(): Observable<AlbumsResponse>{
       return this.http.get<AlbumsResponse>(`${environment.api}albums`);
     }
+    // TODO:
+    // Id is no typed
     getAlbum(id): Observable<AlbumsResponse>{
       return this.http.get<AlbumsResponse>(`${environment.api}albums/${id}`);
     }
@@ -51,6 +55,8 @@ export class MusicService {
     allSongs(): Observable<SongsResponse>{
       return this.http.get<SongsResponse>(`${environment.api}songs`);
     }
+    // TODO:
+    // Id is no typed
     getSong(id: SongsResponse): Observable<SongResponse>{
       return this.http.get<SongResponse>(`${environment.api}songs/${id}`);
     }
